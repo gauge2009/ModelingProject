@@ -22,10 +22,19 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="DOC\pdWorkspace1.sws">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="DOC\住宅物业无卡通行系统-系统架构概要图.vsdx">
       <SubType>Content</SubType>
     </Content>
     <Content Include="DOC\住宅物业无卡通行系统-网络框架图.vsdx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\智慧云社区PackageDiagram.oob">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\智慧云社区PackageDiagram.oom">
       <SubType>Content</SubType>
     </Content>
     <Content Include="DOC\物业公司自助终端体系结构设计文档-Git.docx">
@@ -34,7 +43,13 @@
     <Content Include="DOC\物业自助终端系统组件架构图-单一物业模式.oom">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="DOC\物业自助终端系统组件架构图-服务平台模式.oob">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="DOC\物业自助终端系统组件架构图-服务平台模式.oom">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Graph.dgml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="UMLComponentDiagram.componentdiagram">
@@ -56,5 +71,18 @@
       <SubType>Content</SubType>
     </Content>
     <Folder Include="DOC" />
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="LayerDiagram.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="LayerDiagram.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>LayerDiagram.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="LayerDiagram.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>LayerDiagram.layerdiagram</DependentUpon>
+    </Validate>
   </ItemGroup>
 </Project>
