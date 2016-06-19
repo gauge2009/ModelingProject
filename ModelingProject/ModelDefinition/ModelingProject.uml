@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
   dslVersion="1.0.0.0"
   Id="e027e3c6-a077-49a5-a50b-98e4104a486e"
   name="ModelingProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -34,16 +34,6 @@
           LastKnownLocation="ModelingProject.uml" />
       </annotatedElements>
     </comment>
-    <comment
-      Id="38d003a9-0daf-464c-b61d-b994227a5a97">
-      <body>（含一般消费客户；终端网页版~ B/S）</body>
-      <annotatedElements>
-        <partMoniker
-          Id="66ec30e0-0838-4b29-ab82-b719c7d27ff2"
-          LastKnownName="业主功能"
-          LastKnownLocation="ModelingProject.uml" />
-      </annotatedElements>
-    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
@@ -63,7 +53,7 @@
     <packageHasNamedElement>
       <component
         Id="9af286f4-ef59-4a1d-a2ea-817b42f5fe9e"
-        name="智慧云社区-互联网系统"
+        name="智慧云社区（互联网服务平台）"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -108,10 +98,64 @@
             isComposite="false"
             isService="false"
             isBehavior="false">
+            <targetNamedElementsInternal>
+              <connector
+                Id="d6496445-8947-4a3c-b83a-8d8a2f201891"
+                isLeaf="false"
+                isStatic="false">
+                <partMoniker
+                  Id="a90e9479-55b3-4440-8242-146bb12ef08e"
+                  LastKnownName="开票代理服务"
+                  LastKnownLocation="ModelingProject.uml" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="a5552093-d1a8-4516-bd6c-4e193e5fea02" />
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="0404fc06-d589-499e-a5cc-703caa785132">
+                      <portWithPart>
+                        <providedInterfaceMoniker
+                          Id="4c7399f7-da98-45b6-9fec-f3939faf074b"
+                          LastKnownName="Port2"
+                          LastKnownLocation="ModelingProject.uml" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+              </connector>
+              <connector
+                Id="e99c1aea-a89b-4d79-9b6c-f4dbb935a5ca"
+                isLeaf="false"
+                isStatic="false">
+                <partMoniker
+                  Id="a90e9479-55b3-4440-8242-146bb12ef08e"
+                  LastKnownName="开票代理服务"
+                  LastKnownLocation="ModelingProject.uml" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="199190c5-ec14-4fbb-931d-53a188e988c7" />
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="793264a8-c32f-45ac-97f5-1bfc5500c19e">
+                      <portWithPart>
+                        <providedInterfaceMoniker
+                          Id="11a52d81-4285-47ae-97ca-66bf7055983c"
+                          LastKnownName="Port1"
+                          LastKnownLocation="ModelingProject.uml" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+              </connector>
+            </targetNamedElementsInternal>
             <type_NamedElement>
               <interfaceMoniker
                 Id="750eae01-4ac3-4eb3-adf3-31d0d9f7be11"
-                LastKnownName="开票接口"
+                LastKnownName="统一开票接口"
                 LastKnownLocation="ModelingProject.uml" />
             </type_NamedElement>
           </providedInterface>
@@ -127,29 +171,38 @@
             isComposite="false"
             isService="false"
             isBehavior="false">
+            <targetNamedElementsInternal>
+              <connector
+                Id="0bf70d88-20f0-4f8f-982e-f55f4a955fbd"
+                isLeaf="false"
+                isStatic="false">
+                <partMoniker
+                  Id="b654f1d4-e164-4978-a532-1de321196f1f"
+                  LastKnownName="业主功能"
+                  LastKnownLocation="ModelingProject.uml" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="1727309d-a294-4226-822e-13813414de66" />
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="91389ca9-7e65-4470-8f92-c12d12181814">
+                      <portWithPart>
+                        <providedInterfaceMoniker
+                          Id="9867b636-45cc-433d-a92e-f9f2dc6fd063"
+                          LastKnownName="Port1"
+                          LastKnownLocation="ModelingProject.uml" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+              </connector>
+            </targetNamedElementsInternal>
             <type_NamedElement>
               <interfaceMoniker
                 Id="08b84414-8f99-4be9-9db8-9cc5995fcef6"
                 LastKnownName="智慧云社区查询接口   "
-                LastKnownLocation="ModelingProject.uml" />
-            </type_NamedElement>
-          </providedInterface>
-          <providedInterface
-            Id="3eb4683e-8252-4988-8378-c2ce769ac808"
-            name="Port4"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false"
-            isService="false"
-            isBehavior="false">
-            <type_NamedElement>
-              <interfaceMoniker
-                Id="2b23ebd0-18ba-4bf7-af7f-e4d6f0cd6b77"
-                LastKnownName="操作界面"
                 LastKnownLocation="ModelingProject.uml" />
             </type_NamedElement>
           </providedInterface>
@@ -249,6 +302,51 @@
                 LastKnownLocation="ModelingProject.uml" />
             </type_NamedElement>
           </requiredInterface>
+          <requiredInterface
+            Id="5968e8a9-2a24-4c2e-94aa-b43c57f7d9fa"
+            name="Port6"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="7626b24f-29a4-4e4f-b21a-a3bb54540e36">
+                <providedInterfaceMoniker
+                  Id="7da81dda-7ffd-4c8b-84b7-cca454d6ef07"
+                  LastKnownName="Port1"
+                  LastKnownLocation="ModelingProject.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="20e8c382-2d7e-49b7-9356-ba56ae1c493a"
+                LastKnownName="回写开票状态到物业系统"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+          <part
+            Id="a90e9479-55b3-4440-8242-146bb12ef08e"
+            name="开票代理服务"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="Composite"
+            isComposite="true">
+            <type_NamedElement>
+              <componentMoniker
+                Id="a04d2f03-5906-4d65-ae26-a6ad91bb6a26"
+                LastKnownName="Invoice"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </part>
         </ownedAttributesInternal>
       </component>
     </packageHasNamedElement>
@@ -262,7 +360,7 @@
     <packageHasNamedElement>
       <Interface
         Id="750eae01-4ac3-4eb3-adf3-31d0d9f7be11"
-        name="开票接口"
+        name="统一开票接口"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
@@ -288,7 +386,7 @@
             isBehavior="false">
             <suppliersInternal>
               <dependency
-                Id="bb0d6635-2a68-4e27-96d2-e6423ae15937">
+                Id="043ab40f-bf78-4555-90e5-17ea3e5c032b">
                 <providedInterfaceMoniker
                   Id="83de1dcf-2d4f-419c-8598-77ba5754bcee"
                   LastKnownName="Port3"
@@ -360,6 +458,53 @@
                 LastKnownLocation="ModelingProject.uml" />
             </type_NamedElement>
           </providedInterface>
+          <providedInterface
+            Id="7da81dda-7ffd-4c8b-84b7-cca454d6ef07"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="61fe4838-9960-42a2-b333-6ab07e073706"
+                LastKnownName="开票状态同步接口"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface
+            Id="5edea8b5-fe53-44ae-92f1-9ddd5c61cb2b"
+            name="Port3"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="da284812-8450-407d-9e0d-8d36e5c0b327">
+                <providedInterfaceMoniker
+                  Id="7797b816-5909-44b3-a758-d8d67d6a937e"
+                  LastKnownName="Port2"
+                  LastKnownLocation="ModelingProject.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="aeacd99b-4139-443c-bd2e-c201a5336740"
+                LastKnownName="物管系统开票"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </requiredInterface>
         </ownedAttributesInternal>
       </component>
     </packageHasNamedElement>
@@ -373,7 +518,7 @@
     <packageHasNamedElement>
       <Interface
         Id="2b23ebd0-18ba-4bf7-af7f-e4d6f0cd6b77"
-        name="操作界面"
+        name="物业公司操作界面"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
@@ -407,12 +552,34 @@
         name="Customer"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="9867b636-45cc-433d-a92e-f9f2dc6fd063"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="79125ba0-b3c8-4f91-8abd-50ad0ed5cfd4"
+                LastKnownName="社区服务查询接口   "
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <Interface
         Id="ea4accac-2a20-4f0b-a77b-bcdc9b0c1ec6"
-        name="开票数据"
+        name="开票请求"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
@@ -505,28 +672,11 @@
     <packageHasNamedElement>
       <component
         Id="6043f2b1-5a85-4daa-9120-4003abc47286"
-        name="智慧云社区（互联网）"
+        name="单一物业后台管理(局域网)"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <ownedAttributesInternal>
-          <part
-            Id="2bf84a3b-36b3-44f6-aa63-7c258ea22a58"
-            name="运维管理"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="Composite"
-            isComposite="true">
-            <type_NamedElement>
-              <componentMoniker
-                Id="ead9c378-57ce-49a6-a77b-94f06b3a2177"
-                LastKnownName="Admin"
-                LastKnownLocation="ModelingProject.uml" />
-            </type_NamedElement>
-          </part>
           <part
             Id="f723bc07-36d1-432a-aa46-67b542f1edf3"
             name="外围功能"
@@ -561,23 +711,6 @@
                 LastKnownLocation="ModelingProject.uml" />
             </type_NamedElement>
           </part>
-          <part
-            Id="66ec30e0-0838-4b29-ab82-b719c7d27ff2"
-            name="业主功能"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="Composite"
-            isComposite="true">
-            <type_NamedElement>
-              <componentMoniker
-                Id="dee106bb-5c18-4c10-8f10-2177e3f38fda"
-                LastKnownName="Customer"
-                LastKnownLocation="ModelingProject.uml" />
-            </type_NamedElement>
-          </part>
           <requiredInterface
             Id="3cdde221-c3c9-43d8-951a-b75c24b23b5c"
             name="Port5"
@@ -590,6 +723,15 @@
             isComposite="false"
             isService="false"
             isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="5aacc0fa-18b4-40c1-baa5-48cc75162a81">
+                <providedInterfaceMoniker
+                  Id="a71b4f03-1a43-44b9-bf11-281cceadb283"
+                  LastKnownName="Port2"
+                  LastKnownLocation="ModelingProject.uml" />
+              </dependency>
+            </suppliersInternal>
             <type_NamedElement>
               <interfaceMoniker
                 Id="80b60d00-f336-45fa-98a2-2616f41ab600"
@@ -612,7 +754,7 @@
             <type_NamedElement>
               <interfaceMoniker
                 Id="2b23ebd0-18ba-4bf7-af7f-e4d6f0cd6b77"
-                LastKnownName="操作界面"
+                LastKnownName="物业公司操作界面"
                 LastKnownLocation="ModelingProject.uml" />
             </type_NamedElement>
           </providedInterface>
@@ -630,10 +772,10 @@
             isBehavior="false">
             <suppliersInternal>
               <dependency
-                Id="466bc0fa-9f6b-4a3a-8817-eb1dd2bc1aee">
+                Id="55d24bd6-170c-44a0-af2c-93f4ef6e7762">
                 <providedInterfaceMoniker
-                  Id="7e796d4f-f476-49bb-a133-e3f4dbddee7e"
-                  LastKnownName="Port4"
+                  Id="702358ef-1d54-4706-a870-17f2d411a114"
+                  LastKnownName="Port3"
                   LastKnownLocation="ModelingProject.uml" />
               </dependency>
             </suppliersInternal>
@@ -683,34 +825,6 @@
                 LastKnownLocation="ModelingProject.uml" />
             </type_NamedElement>
           </requiredInterface>
-          <requiredInterface
-            Id="23b53d48-15e9-45ae-a9d9-bc708eb0cd35"
-            name="Port2"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false"
-            isService="false"
-            isBehavior="false">
-            <suppliersInternal>
-              <dependency
-                Id="67341dd1-ccfe-4261-b0b7-7ef477a32250">
-                <providedInterfaceMoniker
-                  Id="7e796d4f-f476-49bb-a133-e3f4dbddee7e"
-                  LastKnownName="Port4"
-                  LastKnownLocation="ModelingProject.uml" />
-              </dependency>
-            </suppliersInternal>
-            <type_NamedElement>
-              <interfaceMoniker
-                Id="88f0c077-47fa-4bb1-b270-b25b054bd843"
-                LastKnownName=" "
-                LastKnownLocation="ModelingProject.uml" />
-            </type_NamedElement>
-          </requiredInterface>
           <part
             Id="a43d761d-7c93-468e-9ddd-49c74191e122"
             name="外围功能"
@@ -745,6 +859,34 @@
                 LastKnownLocation="ModelingProject.uml" />
             </type_NamedElement>
           </part>
+          <requiredInterface
+            Id="ccd86fd0-567a-4198-bcf9-fb8edafb312a"
+            name="Port2"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="c2bf48b7-cb3d-42a1-81af-8749c0ee4269">
+                <providedInterfaceMoniker
+                  Id="702358ef-1d54-4706-a870-17f2d411a114"
+                  LastKnownName="Port3"
+                  LastKnownLocation="ModelingProject.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="5153311b-89e8-47eb-85ce-49f00b4f2e55"
+                LastKnownName="开票申请"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </requiredInterface>
         </ownedAttributesInternal>
       </component>
     </packageHasNamedElement>
@@ -780,7 +922,7 @@
             <type_NamedElement>
               <interfaceMoniker
                 Id="ea4accac-2a20-4f0b-a77b-bcdc9b0c1ec6"
-                LastKnownName="开票数据"
+                LastKnownName="开票请求"
                 LastKnownLocation="ModelingProject.uml" />
             </type_NamedElement>
           </requiredInterface>
@@ -804,7 +946,26 @@
             </type_NamedElement>
           </providedInterface>
           <providedInterface
-            Id="7e796d4f-f476-49bb-a133-e3f4dbddee7e"
+            Id="702358ef-1d54-4706-a870-17f2d411a114"
+            name="Port3"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="de826d7e-c614-4b17-a016-18533fcc097b"
+                LastKnownName="开票代理接口"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </providedInterface>
+          <providedInterface
+            Id="b4c4b9bd-03aa-4578-9f09-5b7c370a086c"
             name="Port4"
             isLeaf="false"
             isStatic="false"
@@ -817,8 +978,8 @@
             isBehavior="false">
             <type_NamedElement>
               <interfaceMoniker
-                Id="67fca991-9361-4061-8004-700bcf17bc13"
-                LastKnownName=" "
+                Id="2c27f2f5-fc5a-4f19-a81f-f9e2deee3a82"
+                LastKnownName="开票状态回写接口"
                 LastKnownLocation="ModelingProject.uml" />
             </type_NamedElement>
           </providedInterface>
@@ -916,6 +1077,34 @@
                 LastKnownLocation="ModelingProject.uml" />
             </type_NamedElement>
           </requiredInterface>
+          <requiredInterface
+            Id="39f8068d-7f55-4758-9922-4bd70774fab5"
+            name="Port3"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="5530cc01-9021-48f8-88e2-e3b08b747ed7">
+                <providedInterfaceMoniker
+                  Id="b4c4b9bd-03aa-4578-9f09-5b7c370a086c"
+                  LastKnownName="Port4"
+                  LastKnownLocation="ModelingProject.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="5cb58e94-d859-470c-812d-2421f1593fd0"
+                LastKnownName="回写开票状态"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </requiredInterface>
         </ownedAttributesInternal>
       </component>
     </packageHasNamedElement>
@@ -952,6 +1141,153 @@
       <Interface
         Id="27e3e82d-189b-4ac8-8f78-b0b856cd32e5"
         name="开票申请"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="61fe4838-9960-42a2-b333-6ab07e073706"
+        name="开票状态同步接口"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="20e8c382-2d7e-49b7-9356-ba56ae1c493a"
+        name="回写开票状态到物业系统"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="85ac7794-0bf0-4b22-867d-95c518586574"
+        name="Interface2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="de826d7e-c614-4b17-a016-18533fcc097b"
+        name="开票代理接口"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="5153311b-89e8-47eb-85ce-49f00b4f2e55"
+        name="开票申请"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="aeacd99b-4139-443c-bd2e-c201a5336740"
+        name="物管系统开票"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="a04d2f03-5906-4d65-ae26-a6ad91bb6a26"
+        name="Invoice"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="11a52d81-4285-47ae-97ca-66bf7055983c"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="fb2f0fbf-b2d0-47a7-a26f-6468b34cb6ca"
+                LastKnownName="电子票开票接口"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </providedInterface>
+          <providedInterface
+            Id="4c7399f7-da98-45b6-9fec-f3939faf074b"
+            name="Port2"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="a4db930b-13be-4fc4-ab5b-bfe2fbb7a776"
+                LastKnownName="纸票开票接口"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="79125ba0-b3c8-4f91-8abd-50ad0ed5cfd4"
+        name="社区服务查询接口   "
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="fb2f0fbf-b2d0-47a7-a26f-6468b34cb6ca"
+        name="电子票开票接口"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="a4db930b-13be-4fc4-ab5b-bfe2fbb7a776"
+        name="纸票开票接口"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="2c27f2f5-fc5a-4f19-a81f-f9e2deee3a82"
+        name="开票状态回写接口"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="5cb58e94-d859-470c-812d-2421f1593fd0"
+        name="回写开票状态"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="d31562c9-9118-475a-bd2e-12074d6b6bb1"
+        name="查询接口   "
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="72478b11-a3da-4fad-89f3-bc72676dbf03"
+        name="查询接口"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="8d6d7a1f-acee-4161-8f47-106c95cf72d7"
+        name="查询"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
