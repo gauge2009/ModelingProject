@@ -22,7 +22,19 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-    <Content Include="DOC\物业公司自助终端体系结构设计文档.docx">
+    <Content Include="DOC\住宅物业无卡通行系统-系统架构概要图.vsdx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\住宅物业无卡通行系统-网络框架图.vsdx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\物业公司自助终端体系结构设计文档-Git.docx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\物业自助终端系统组件架构图-单一物业模式.oom">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\物业自助终端系统组件架构图-服务平台模式.oom">
       <SubType>Content</SubType>
     </Content>
     <Content Include="UMLComponentDiagram.componentdiagram">
