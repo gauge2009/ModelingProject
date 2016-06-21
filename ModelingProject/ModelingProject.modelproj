@@ -49,6 +49,12 @@
     <Content Include="DOC\物业自助终端系统组件架构图-服务平台模式.oom">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="DOC\需求文档\~WRL1501.tmp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\需求文档\航天物业电子发票_产品需求文档_20160615更新-Qst617_by_zrz.docx">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Graph.dgml">
       <SubType>Content</SubType>
     </Content>
@@ -66,6 +72,7 @@
       <SubType>Content</SubType>
       <DependentUpon>UMLComponentDiagram_PlanB.componentdiagram</DependentUpon>
     </Content>
+    <Folder Include="DOC\需求文档\" />
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\ModelingProject.uml">
       <SubType>Content</SubType>
