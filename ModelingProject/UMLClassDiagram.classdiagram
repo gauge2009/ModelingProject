@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="65de017e-1306-41e8-a495-59def43b435c" name="UMLClassDiagram" linkedPackageId="83b79c27-5ebd-45bb-a1b8-87df7425e708" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="f19076b8-c2ab-422d-aec7-5fe7712db082">
+      <profileInstance Id="7b76836c-f379-4048-a7da-3b5527dd871b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="014d2a9b-0c6f-40c2-b302-56ad601490ad">
+      <profileInstance Id="91c2e4c7-0038-4fde-a047-3f55ff75861c" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4bc7a07d-43e4-4246-8642-3ce188d0abb5" name="物业公司" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="98aa2a3f-36fe-4799-b8de-267794bc4594" />
+        <targetEnds>
+          <association Id="f303a200-e1ae-4903-bdc8-bfe0f32e811f" isDerived="false" sourceEndRoleName="物业公司" targetEndRoleName="业主" isLeaf="false" isAbstract="false">
+            <classMoniker Id="4a007b32-5ba9-44b3-aeb3-027d7292d52b" LastKnownName="业主" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="22ac654d-1d87-4d62-9c17-083ab1b9ed1c" name="物业公司" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7ab628ff-578d-4d07-89ec-20944d23d99a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="68cc71e5-432e-4328-bfe4-05e19cae3c48" name="业主" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="f13a3f01-16e0-4d38-92fa-7ab339038f39" name="Lower" value="*">
+                      <elementDefinition Id="bd4c73fd-b048-4976-abf3-b438c81558d6" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="94316d8f-b08c-4508-8054-c3c770076495" name="Upper" value="*">
+                      <elementDefinition Id="7fb57f8f-f869-44e5-96a5-f9ca7ab058ef" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="8a5f0774-a3ae-4f17-ba2b-1cdf105229ab" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="72cd63b8-c288-4809-844c-0ea5d356af55" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="01ead3a4-a5fa-40be-8226-2aeecf5c5ed6" name="公司名称" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3572b17b-3af2-44c2-bc0a-307ddb1e634a" />
+          </property>
+          <property Id="6c53bdda-e987-49c3-a086-782705145d31" name="公司代码" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="55b4d49b-e4ed-423e-9133-9d36ffae7139" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4a007b32-5ba9-44b3-aeb3-027d7292d52b" name="业主" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1c6ce4b5-fbf9-49a3-86cb-3bcac52e70a0" />
+        <targetEnds>
+          <association Id="e0185bf2-ec9f-4aac-a64c-987911cb5a64" isDerived="false" sourceEndRoleName="业主" targetEndRoleName="车辆" isLeaf="false" isAbstract="false">
+            <classMoniker Id="9574ce02-ad6f-4517-8c83-b6ac407ca36e" LastKnownName="车辆" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9bc3727c-ff75-4b95-bf78-90756f3304e1" name="业主" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="328fb026-5051-4fcd-b3a4-c91b7ecdbaef" name="Lower" value="0">
+                      <elementDefinition Id="17a34016-74fa-4a71-8d8b-833efcaa5938" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="ca939c36-1ea2-4fcd-b2b1-e17e5cf82342" name="Upper" value="1">
+                      <elementDefinition Id="05693793-8a85-420e-8fa0-0d6cce79aea4" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="7b9e0345-c946-4cc0-99c6-f283e5ac5d1a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bf0876fb-66c2-4e3e-93b5-3fdf32c36346" name="车辆" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="e41c34e5-99cf-4010-a5c1-585d966ac07d" name="Lower" value="*">
+                      <elementDefinition Id="17592708-b746-432e-af91-497ba3357992" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b06ca763-87db-4feb-be5c-78e9ed624301" name="Upper" value="*">
+                      <elementDefinition Id="722cab32-e7be-4f37-91e6-417e1b2c3c35" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="aa3f244b-5b73-45da-8b42-5f1ffc28d19e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7f059314-7515-4336-b07d-4d2c3abd31a3" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="967da83d-bc44-4e0e-8d13-0d4fbab6df15" name="姓名" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0c0b1811-0b8f-4654-b475-3e4ced82af64" />
+          </property>
+          <property Id="8b0fca8e-48cc-42f1-980b-38720f50102b" name="身份证号码" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="91a99b87-8bdd-4f26-aa26-a0c2980bfba4" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9574ce02-ad6f-4517-8c83-b6ac407ca36e" name="车辆" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8dc6d56f-b7d5-4021-bd28-3475739bff63" />
+        <ownedAttributesInternal>
+          <property Id="3d8167a2-649c-4af5-a15f-1a4533958479" name="车牌" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9e07664b-8f13-464a-9cbf-bf9317c95f01" />
+          </property>
+          <property Id="f887fa7f-2555-4971-b440-23a28c7564ee" name="业主" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="27c5c836-0f4d-4d60-817f-4f6fc8b8ba39" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="83b79c27-5ebd-45bb-a1b8-87df7425e708" name="ModelingProject">
+    <elementDefinition Id="e027e3c6-a077-49a5-a50b-98e4104a486e" />
+  </package>
+</logicalClassDesignerModel>

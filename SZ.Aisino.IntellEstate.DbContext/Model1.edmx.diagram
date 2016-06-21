@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2560170b264241f6894608abc495148e" Name="Diagram1" ZoomLevel="74" >
+        <EntityTypeShape EntityType="Model.BASE_APPLICATION_ROLE_RIGHT" Width="2.625" PointX="8.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.BASE_APPLICATION_ROLES" Width="2.125" PointX="5.625" PointY="0.625" />
+        <EntityTypeShape EntityType="Model.BASE_APPLICATIONS" Width="2.125" PointX="0.5" PointY="2.375" />
+        <EntityTypeShape EntityType="Model.BASE_BUTTON" Width="1.5" PointX="1.125" PointY="6" />
+        <EntityTypeShape EntityType="Model.BASE_MODULE" Width="2" PointX="3.375" PointY="0.5" />
+        <EntityTypeShape EntityType="Model.BASE_MODULE_BUTTON" Width="1.5" PointX="3.375" PointY="8.5" />
+        <AssociationConnector Association="Model.FK_BASE_MODULE_APPLICATION" />
+        <AssociationConnector Association="Model.BASE_BUTTONBASE_MODULE_BUTTON" />
+        <AssociationConnector Association="Model.BASE_MODULEBASE_MODULE_BUTTON" />
+        <AssociationConnector Association="Model.BASE_APPLICATION_ROLESBASE_APPLICATION_ROLE_RIGHT" />
+        <EntityTypeShape EntityType="Model.BASE_USERINFO" Width="2" PointX="5.75" PointY="6.25" />
+        <EntityTypeShape EntityType="Model.BASE_USERROLE" Width="2.25" PointX="9.25" PointY="4.875" />
+        <AssociationConnector Association="Model.BASE_APPLICATION_ROLESBASE_USERROLE" />
+        <AssociationConnector Association="Model.BASE_USERINFOBASE_USERROLE" />
+        <EntityTypeShape EntityType="Model.Area" Width="1.5" PointX="8.375" PointY="9.75" />
+        <EntityTypeShape EntityType="Model.Poster" Width="1.5" PointX="10.375" PointY="9.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

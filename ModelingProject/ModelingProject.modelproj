@@ -58,6 +58,13 @@
     <Content Include="Graph.dgml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="UMLClassDiagram.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLClassDiagram.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLClassDiagram.classdiagram</DependentUpon>
+    </Content>
     <Content Include="UMLComponentDiagram.componentdiagram">
       <SubType>Content</SubType>
     </Content>

@@ -1,0 +1,864 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="BASE_APPLICATION_ROLE_RIGHT" EntityType="Model.Store.BASE_APPLICATION_ROLE_RIGHT" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BASE_APPLICATION_ROLES" EntityType="Model.Store.BASE_APPLICATION_ROLES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BASE_APPLICATIONS" EntityType="Model.Store.BASE_APPLICATIONS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BASE_BUTTON" EntityType="Model.Store.BASE_BUTTON" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BASE_MODULE" EntityType="Model.Store.BASE_MODULE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BASE_MODULE_BUTTON" EntityType="Model.Store.BASE_MODULE_BUTTON" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BASE_USERINFO" EntityType="Model.Store.BASE_USERINFO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BASE_USERROLE" EntityType="Model.Store.BASE_USERROLE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Areas" EntityType="Model.Store.Areas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Posters" EntityType="Model.Store.Posters" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_BASE_MODULE_APPLICATION" Association="Model.Store.FK_BASE_MODULE_APPLICATION">
+      <End Role="BASE_APPLICATIONS" EntitySet="BASE_APPLICATIONS" />
+      <End Role="BASE_MODULE" EntitySet="BASE_MODULE" />
+    </AssociationSet>
+    <AssociationSet Name="BASE_BUTTONBASE_MODULE_BUTTON" Association="Model.Store.BASE_BUTTONBASE_MODULE_BUTTON">
+      <End Role="BASE_BUTTON" EntitySet="BASE_BUTTON" />
+      <End Role="BASE_MODULE_BUTTON" EntitySet="BASE_MODULE_BUTTON" />
+    </AssociationSet>
+    <AssociationSet Name="BASE_MODULEBASE_MODULE_BUTTON" Association="Model.Store.BASE_MODULEBASE_MODULE_BUTTON">
+      <End Role="BASE_MODULE" EntitySet="BASE_MODULE" />
+      <End Role="BASE_MODULE_BUTTON" EntitySet="BASE_MODULE_BUTTON" />
+    </AssociationSet>
+    <AssociationSet Name="BASE_APPLICATION_ROLESBASE_APPLICATION_ROLE_RIGHT" Association="Model.Store.BASE_APPLICATION_ROLESBASE_APPLICATION_ROLE_RIGHT">
+      <End Role="BASE_APPLICATION_ROLES" EntitySet="BASE_APPLICATION_ROLES" />
+      <End Role="BASE_APPLICATION_ROLE_RIGHT" EntitySet="BASE_APPLICATION_ROLE_RIGHT" />
+    </AssociationSet>
+    <AssociationSet Name="BASE_APPLICATION_ROLESBASE_USERROLE" Association="Model.Store.BASE_APPLICATION_ROLESBASE_USERROLE">
+      <End Role="BASE_APPLICATION_ROLES" EntitySet="BASE_APPLICATION_ROLES" />
+      <End Role="BASE_USERROLE" EntitySet="BASE_USERROLE" />
+    </AssociationSet>
+    <AssociationSet Name="BASE_USERINFOBASE_USERROLE" Association="Model.Store.BASE_USERINFOBASE_USERROLE">
+      <End Role="BASE_USERINFO" EntitySet="BASE_USERINFO" />
+      <End Role="BASE_USERROLE" EntitySet="BASE_USERROLE" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BASE_APPLICATION_ROLE_RIGHT">
+    <Key>
+      <PropertyRef Name="APPLICATION_ROLE_RIGHT_ID" />
+    </Key>
+    <Property Name="APPLICATION_ROLE_RIGHT_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="APPLICATION_ROLE_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="PERMISSION_TYPE" Type="decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="MODULE_ID" Type="decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="BUTTON_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="AUTHORIZE" Type="decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="CREATE_USERNAME" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="CREATE_FULLNAME" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="CREATE_DATE" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="BASE_APPLICATION_ROLES">
+    <Key>
+      <PropertyRef Name="APPLICATION_ROLE_ID" />
+    </Key>
+    <Property Name="APPLICATION_ROLE_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="APPLICATION_ID" Type="decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="APPLICATION_KEY" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="APPLICATION_CODE" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="APPLICATION_NAME" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="PLATFORM" Type="decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="PARENT_ID" Type="decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="ROLE_NAME" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="ROLE_RESTRICTION" Type="nvarchar" Nullable="true" MaxLength="400" />
+    <Property Name="ROLE_REMARK" Type="nvarchar" Nullable="true" MaxLength="400" />
+    <Property Name="APPLAY_TO" Type="decimal" Nullable="true" Precision="38" Scale="0" />
+    <Property Name="SEQUENCE" Type="decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="SEQUENCE_STRING" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="DELETE_MARK" Type="decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="MODIFY_USERNAME" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="MODIFY_FULLNAME" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="MODIFY_DATE" Type="datetime" Nullable="false" />
+    <Property Name="CREATE_USERNAME" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CREATE_FULLNAME" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CREATE_DATE" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BASE_APPLICATIONS">
+    <Key>
+      <PropertyRef Name="APPLICATION_ID" />
+    </Key>
+    <Property Name="APPLICATION_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="APPLICATION_KEY" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="APPLICATION_CODE" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="APPLICATION_NAME" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="ICON" Type="nvarchar" Nullable="true" MaxLength="508" />
+    <Property Name="DESCRIPTION" Type="nvarchar" Nullable="true" MaxLength="1000" />
+    <Property Name="URL" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="IP" Type="nvarchar" Nullable="true" MaxLength="80" />
+    <Property Name="BINDING" Type="decimal" Nullable="true" Precision="38" Scale="0" />
+    <Property Name="SEQUENCE" Type="decimal" Nullable="true" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="BASE_BUTTON">
+    <Key>
+      <PropertyRef Name="BUTTON_ID" />
+    </Key>
+    <Property Name="BUTTON_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="BUTTON_CODE" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="BUTTON_NAME" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="BUTTON_TITLE" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="BUTTON_TYPE" Type="decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="BUTTON_ICON" Type="nvarchar" Nullable="false" MaxLength="508" />
+    <Property Name="BUTTON_IMG" Type="nvarchar" Nullable="false" MaxLength="508" />
+    <Property Name="BUTTON_EVENT" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="BUTTON_METHOD" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="BUTTON_REMARK" Type="nvarchar" Nullable="true" MaxLength="400" />
+    <Property Name="SEQUENCE" Type="decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="DELETE_MARK" Type="decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="MODIFY_USERNAME" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="MODIFY_FULLNAME" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="MODIFY_DATE" Type="datetime" Nullable="false" />
+    <Property Name="CREATE_USERNAME" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CREATE_FULLNAME" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CREATE_DATE" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BASE_MODULE">
+    <Key>
+      <PropertyRef Name="MODULE_ID" />
+    </Key>
+    <Property Name="MODULE_ID" Type="decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="APPLICATION_ID" Type="decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="APPLICATION_CODE" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="APPLICATION_NAME" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="PLATFORM" Type="decimal" Nullable="true" Precision="38" Scale="0" />
+    <Property Name="PARENT_ID" Type="decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="MODULE_CODE" Type="nvarchar" Nullable="false" MaxLength="600" />
+    <Property Name="MODULE_NAME" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="MODULE_TYPE" Type="decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="MODULE_RIGHT_CODE" Type="nvarchar" Nullable="true" MaxLength="400" />
+    <Property Name="NAVIGATE_URL" Type="nvarchar" Nullable="true" MaxLength="600" />
+    <Property Name="QUERY_STRING" Type="nvarchar" Nullable="true" MaxLength="600" />
+    <Property Name="DIRECTORY" Type="nvarchar" Nullable="true" MaxLength="600" />
+    <Property Name="FILENAME" Type="nvarchar" Nullable="true" MaxLength="600" />
+    <Property Name="ICON" Type="nvarchar" Nullable="true" MaxLength="508" />
+    <Property Name="IMG" Type="nvarchar" Nullable="true" MaxLength="508" />
+    <Property Name="MODULE_LAYER" Type="decimal" Nullable="true" Precision="38" Scale="0" />
+    <Property Name="VERSION" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="INFORMATION" Type="nvarchar" Nullable="true" MaxLength="1000" />
+    <Property Name="REMARK" Type="nvarchar" Nullable="true" MaxLength="4000" />
+    <Property Name="SEQUENCE" Type="decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="SEQUENCE_STRING" Type="nvarchar" Nullable="true" MaxLength="1000" />
+    <Property Name="DELETE_MARK" Type="decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="MODIFY_USERNAME" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="MODIFY_FULLNAME" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="MODIFY_DATE" Type="datetime" Nullable="false" />
+    <Property Name="CREATE_USERNAME" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CREATE_FULLNAME" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CREATE_DATE" Type="datetime" Nullable="false" />
+    <Property Name="BUTTON_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="BASE_MODULE_BUTTON">
+    <Key>
+      <PropertyRef Name="MODULE_BUTTON_ID" />
+    </Key>
+    <Property Name="MODULE_BUTTON_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="BUTTON_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="RESPONSE_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="MODULE_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="SEQUENCE" Type="decimal" Nullable="true" Precision="38" Scale="0" />
+    <Property Name="CREATE_USERNAME" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="CREATE_FULLNAME" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="CREATE_DATE" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="BASE_USERINFO">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="COMPANY_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="COMPANY_NAME_CN" Type="nvarchar" Nullable="true" MaxLength="400" />
+    <Property Name="USERNAME" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="PASSWORD" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="GENDER" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="EMAIL" Type="nvarchar" Nullable="true" MaxLength="400" />
+    <Property Name="QUESTION" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="ANSWER" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="SOURCE_URL" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="SOURCE_NAME" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="LANGUAGE" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="USER_TYPE" Type="decimal" Nullable="true" Precision="38" Scale="0" />
+    <Property Name="IS_ADMIN" Type="bit" Nullable="false" />
+    <Property Name="LOCK_DAY" Type="datetime" Nullable="true" />
+    <Property Name="DELETE_MARK" Type="decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="MODIFY_USERNAME" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="MODIFY_FULLNAME" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="MODIFY_DATE" Type="datetime" Nullable="true" />
+    <Property Name="CREATE_USERNAME" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="CREATE_FULLNAME" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="CREATE_DATE" Type="datetime" Nullable="true" />
+    <Property Name="LastActive" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="BASE_USERROLE">
+    <Key>
+      <PropertyRef Name="USERROLE_ID" />
+    </Key>
+    <Property Name="USERROLE_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="APPLICATION_ROLE_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="USER_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="DELETE_MARK" Type="decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="MODIFY_USERNAME" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="MODIFY_FULLNAME" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="MODIFY_DATE" Type="datetime" Nullable="true" />
+    <Property Name="CREATE_USERNAME" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="CREATE_FULLNAME" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="CREATE_DATE" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Areas">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsLock" Type="bit" Nullable="false" />
+    <Property Name="GroupName" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Posters">
+    <Key>
+      <PropertyRef Name="PosterID" />
+    </Key>
+    <Property Name="PosterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExhibitionID" Type="int" Nullable="true" />
+    <Property Name="InfoID" Type="int" Nullable="true" />
+    <Property Name="HallID" Type="int" Nullable="true" />
+    <Property Name="MuseumID" Type="int" Nullable="true" />
+    <Property Name="Category" Type="tinyint" Nullable="false" />
+    <Property Name="OriginDir" Type="nvarchar" Nullable="true" MaxLength="1000" />
+    <Property Name="Filename" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="OriginPath" Type="nvarchar" Nullable="true" MaxLength="1000" />
+    <Property Name="RootPath" Type="nvarchar" Nullable="true" MaxLength="1000" />
+    <Property Name="Sequence" Type="int" Nullable="true" />
+  </EntityType>
+  <Association Name="FK_BASE_MODULE_APPLICATION">
+    <End Role="BASE_APPLICATIONS" Type="Model.Store.BASE_APPLICATIONS" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BASE_MODULE" Type="Model.Store.BASE_MODULE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BASE_APPLICATIONS">
+        <PropertyRef Name="APPLICATION_ID" />
+      </Principal>
+      <Dependent Role="BASE_MODULE">
+        <PropertyRef Name="APPLICATION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BASE_BUTTONBASE_MODULE_BUTTON">
+    <End Role="BASE_BUTTON" Type="Model.Store.BASE_BUTTON" Multiplicity="0..1" />
+    <End Role="BASE_MODULE_BUTTON" Type="Model.Store.BASE_MODULE_BUTTON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BASE_BUTTON">
+        <PropertyRef Name="BUTTON_ID" />
+      </Principal>
+      <Dependent Role="BASE_MODULE_BUTTON">
+        <PropertyRef Name="BUTTON_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BASE_MODULEBASE_MODULE_BUTTON">
+    <End Role="BASE_MODULE" Type="Model.Store.BASE_MODULE" Multiplicity="0..1" />
+    <End Role="BASE_MODULE_BUTTON" Type="Model.Store.BASE_MODULE_BUTTON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BASE_MODULE">
+        <PropertyRef Name="MODULE_ID" />
+      </Principal>
+      <Dependent Role="BASE_MODULE_BUTTON">
+        <PropertyRef Name="MODULE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BASE_APPLICATION_ROLESBASE_APPLICATION_ROLE_RIGHT">
+    <End Role="BASE_APPLICATION_ROLES" Type="Model.Store.BASE_APPLICATION_ROLES" Multiplicity="0..1" />
+    <End Role="BASE_APPLICATION_ROLE_RIGHT" Type="Model.Store.BASE_APPLICATION_ROLE_RIGHT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BASE_APPLICATION_ROLES">
+        <PropertyRef Name="APPLICATION_ROLE_ID" />
+      </Principal>
+      <Dependent Role="BASE_APPLICATION_ROLE_RIGHT">
+        <PropertyRef Name="APPLICATION_ROLE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BASE_APPLICATION_ROLESBASE_USERROLE">
+    <End Role="BASE_APPLICATION_ROLES" Type="Model.Store.BASE_APPLICATION_ROLES" Multiplicity="0..1" />
+    <End Role="BASE_USERROLE" Type="Model.Store.BASE_USERROLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BASE_APPLICATION_ROLES">
+        <PropertyRef Name="APPLICATION_ROLE_ID" />
+      </Principal>
+      <Dependent Role="BASE_USERROLE">
+        <PropertyRef Name="APPLICATION_ROLE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BASE_USERINFOBASE_USERROLE">
+    <End Role="BASE_USERINFO" Type="Model.Store.BASE_USERINFO" Multiplicity="0..1" />
+    <End Role="BASE_USERROLE" Type="Model.Store.BASE_USERROLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BASE_USERINFO">
+        <PropertyRef Name="USER_ID" />
+      </Principal>
+      <Dependent Role="BASE_USERROLE">
+        <PropertyRef Name="USER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="false" >
+          <EntitySet Name="BASE_APPLICATION_ROLE_RIGHT" EntityType="Model.BASE_APPLICATION_ROLE_RIGHT" />
+          <EntitySet Name="BASE_APPLICATION_ROLES" EntityType="Model.BASE_APPLICATION_ROLES" />
+          <EntitySet Name="BASE_APPLICATIONS" EntityType="Model.BASE_APPLICATIONS" />
+          <EntitySet Name="BASE_BUTTON" EntityType="Model.BASE_BUTTON" />
+          <EntitySet Name="BASE_MODULE" EntityType="Model.BASE_MODULE" />
+          <EntitySet Name="BASE_MODULE_BUTTON" EntityType="Model.BASE_MODULE_BUTTON" />
+          <AssociationSet Name="FK_BASE_MODULE_APPLICATION" Association="Model.FK_BASE_MODULE_APPLICATION">
+            <End Role="BASE_APPLICATIONS" EntitySet="BASE_APPLICATIONS" />
+            <End Role="BASE_MODULE" EntitySet="BASE_MODULE" />
+          </AssociationSet>
+          <AssociationSet Name="BASE_BUTTONBASE_MODULE_BUTTON" Association="Model.BASE_BUTTONBASE_MODULE_BUTTON">
+            <End Role="BASE_BUTTON" EntitySet="BASE_BUTTON" />
+            <End Role="BASE_MODULE_BUTTON" EntitySet="BASE_MODULE_BUTTON" />
+          </AssociationSet>
+          <AssociationSet Name="BASE_MODULEBASE_MODULE_BUTTON" Association="Model.BASE_MODULEBASE_MODULE_BUTTON">
+            <End Role="BASE_MODULE" EntitySet="BASE_MODULE" />
+            <End Role="BASE_MODULE_BUTTON" EntitySet="BASE_MODULE_BUTTON" />
+          </AssociationSet>
+          <AssociationSet Name="BASE_APPLICATION_ROLESBASE_APPLICATION_ROLE_RIGHT" Association="Model.BASE_APPLICATION_ROLESBASE_APPLICATION_ROLE_RIGHT">
+            <End Role="BASE_APPLICATION_ROLES" EntitySet="BASE_APPLICATION_ROLES" />
+            <End Role="BASE_APPLICATION_ROLE_RIGHT" EntitySet="BASE_APPLICATION_ROLE_RIGHT" />
+          </AssociationSet>
+          <EntitySet Name="BASE_USERINFO" EntityType="Model.BASE_USERINFO" />
+          <EntitySet Name="BASE_USERROLE" EntityType="Model.BASE_USERROLE" />
+          <AssociationSet Name="BASE_APPLICATION_ROLESBASE_USERROLE" Association="Model.BASE_APPLICATION_ROLESBASE_USERROLE">
+            <End Role="BASE_APPLICATION_ROLES" EntitySet="BASE_APPLICATION_ROLES" />
+            <End Role="BASE_USERROLE" EntitySet="BASE_USERROLE" />
+          </AssociationSet>
+          <AssociationSet Name="BASE_USERINFOBASE_USERROLE" Association="Model.BASE_USERINFOBASE_USERROLE">
+            <End Role="BASE_USERINFO" EntitySet="BASE_USERINFO" />
+            <End Role="BASE_USERROLE" EntitySet="BASE_USERROLE" />
+          </AssociationSet>
+          <EntitySet Name="Areas" EntityType="Model.Area" />
+          <EntitySet Name="Posters" EntityType="Model.Poster" />
+          </EntityContainer>
+        <EntityType Name="BASE_APPLICATION_ROLE_RIGHT">
+          <Key>
+            <PropertyRef Name="APPLICATION_ROLE_RIGHT_ID" />
+          </Key>
+          <Property Name="APPLICATION_ROLE_RIGHT_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="APPLICATION_ROLE_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="PERMISSION_TYPE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="MODULE_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="BUTTON_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="AUTHORIZE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="CREATE_USERNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_FULLNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_DATE" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="BASE_APPLICATION_ROLES" Relationship="Model.BASE_APPLICATION_ROLESBASE_APPLICATION_ROLE_RIGHT" FromRole="BASE_APPLICATION_ROLE_RIGHT" ToRole="BASE_APPLICATION_ROLES" />
+        </EntityType>
+        <EntityType Name="BASE_APPLICATION_ROLES">
+          <Key>
+            <PropertyRef Name="APPLICATION_ROLE_ID" />
+          </Key>
+          <Property Name="APPLICATION_ROLE_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="APPLICATION_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="APPLICATION_KEY" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="APPLICATION_CODE" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="APPLICATION_NAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PLATFORM" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="PARENT_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="ROLE_NAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ROLE_RESTRICTION" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="ROLE_REMARK" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="APPLAY_TO" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="SEQUENCE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="SEQUENCE_STRING" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DELETE_MARK" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="MODIFY_USERNAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MODIFY_FULLNAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MODIFY_DATE" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CREATE_USERNAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_FULLNAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_DATE" Type="DateTime" Nullable="false" Precision="7" />
+          <NavigationProperty Name="BASE_APPLICATION_ROLE_RIGHT" Relationship="Model.BASE_APPLICATION_ROLESBASE_APPLICATION_ROLE_RIGHT" FromRole="BASE_APPLICATION_ROLES" ToRole="BASE_APPLICATION_ROLE_RIGHT" />
+          <NavigationProperty Name="BASE_USERROLE" Relationship="Model.BASE_APPLICATION_ROLESBASE_USERROLE" FromRole="BASE_APPLICATION_ROLES" ToRole="BASE_USERROLE" />
+        </EntityType>
+        <EntityType Name="BASE_APPLICATIONS">
+          <Key>
+            <PropertyRef Name="APPLICATION_ID" />
+          </Key>
+          <Property Name="APPLICATION_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="APPLICATION_KEY" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="APPLICATION_CODE" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="APPLICATION_NAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ICON" Type="String" MaxLength="508" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="URL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IP" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="BINDING" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="SEQUENCE" Type="Decimal" Precision="38" Scale="0" />
+          <NavigationProperty Name="BASE_MODULE" Relationship="Model.FK_BASE_MODULE_APPLICATION" FromRole="BASE_APPLICATIONS" ToRole="BASE_MODULE" />
+        </EntityType>
+        <EntityType Name="BASE_BUTTON">
+          <Key>
+            <PropertyRef Name="BUTTON_ID" />
+          </Key>
+          <Property Name="BUTTON_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BUTTON_CODE" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BUTTON_NAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BUTTON_TITLE" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BUTTON_TYPE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="BUTTON_ICON" Type="String" Nullable="false" MaxLength="508" FixedLength="false" Unicode="true" />
+          <Property Name="BUTTON_IMG" Type="String" Nullable="false" MaxLength="508" FixedLength="false" Unicode="true" />
+          <Property Name="BUTTON_EVENT" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BUTTON_METHOD" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BUTTON_REMARK" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="SEQUENCE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="DELETE_MARK" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="MODIFY_USERNAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MODIFY_FULLNAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MODIFY_DATE" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CREATE_USERNAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_FULLNAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_DATE" Type="DateTime" Nullable="false" Precision="7" />
+          <NavigationProperty Name="BASE_MODULE_BUTTON" Relationship="Model.BASE_BUTTONBASE_MODULE_BUTTON" FromRole="BASE_BUTTON" ToRole="BASE_MODULE_BUTTON" />
+        </EntityType>
+        <EntityType Name="BASE_MODULE">
+          <Key>
+            <PropertyRef Name="MODULE_ID" />
+          </Key>
+          <Property Name="MODULE_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="None" />
+          <Property Name="APPLICATION_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="APPLICATION_CODE" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="APPLICATION_NAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PLATFORM" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="PARENT_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="MODULE_CODE" Type="String" Nullable="false" MaxLength="600" FixedLength="false" Unicode="true" />
+          <Property Name="MODULE_NAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MODULE_TYPE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="MODULE_RIGHT_CODE" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="NAVIGATE_URL" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+          <Property Name="QUERY_STRING" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+          <Property Name="DIRECTORY" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+          <Property Name="FILENAME" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+          <Property Name="ICON" Type="String" MaxLength="508" FixedLength="false" Unicode="true" />
+          <Property Name="IMG" Type="String" MaxLength="508" FixedLength="false" Unicode="true" />
+          <Property Name="MODULE_LAYER" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="VERSION" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="INFORMATION" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="REMARK" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="SEQUENCE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="SEQUENCE_STRING" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="DELETE_MARK" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="MODIFY_USERNAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MODIFY_FULLNAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MODIFY_DATE" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CREATE_USERNAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_FULLNAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_DATE" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="BUTTON_ID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="BASE_APPLICATIONS" Relationship="Model.FK_BASE_MODULE_APPLICATION" FromRole="BASE_MODULE" ToRole="BASE_APPLICATIONS" />
+          <NavigationProperty Name="BASE_MODULE_BUTTON" Relationship="Model.BASE_MODULEBASE_MODULE_BUTTON" FromRole="BASE_MODULE" ToRole="BASE_MODULE_BUTTON" />
+        </EntityType>
+        <EntityType Name="BASE_MODULE_BUTTON">
+          <Key>
+            <PropertyRef Name="MODULE_BUTTON_ID" />
+          </Key>
+          <Property Name="MODULE_BUTTON_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BUTTON_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="RESPONSE_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MODULE_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SEQUENCE" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="CREATE_USERNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_FULLNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_DATE" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="BASE_BUTTON" Relationship="Model.BASE_BUTTONBASE_MODULE_BUTTON" FromRole="BASE_MODULE_BUTTON" ToRole="BASE_BUTTON" />
+          <NavigationProperty Name="BASE_MODULE" Relationship="Model.BASE_MODULEBASE_MODULE_BUTTON" FromRole="BASE_MODULE_BUTTON" ToRole="BASE_MODULE" />
+        </EntityType>
+        <Association Name="FK_BASE_MODULE_APPLICATION">
+          <End Type="Model.BASE_APPLICATIONS" Role="BASE_APPLICATIONS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Model.BASE_MODULE" Role="BASE_MODULE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_APPLICATIONS">
+              <PropertyRef Name="APPLICATION_ID" />
+            </Principal>
+            <Dependent Role="BASE_MODULE">
+              <PropertyRef Name="APPLICATION_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="BASE_BUTTONBASE_MODULE_BUTTON">
+          <End Type="Model.BASE_BUTTON" Role="BASE_BUTTON" Multiplicity="0..1" />
+          <End Type="Model.BASE_MODULE_BUTTON" Role="BASE_MODULE_BUTTON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_BUTTON">
+              <PropertyRef Name="BUTTON_ID" />
+            </Principal>
+            <Dependent Role="BASE_MODULE_BUTTON">
+              <PropertyRef Name="BUTTON_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="BASE_MODULEBASE_MODULE_BUTTON">
+          <End Type="Model.BASE_MODULE" Role="BASE_MODULE" Multiplicity="0..1" />
+          <End Type="Model.BASE_MODULE_BUTTON" Role="BASE_MODULE_BUTTON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_MODULE">
+              <PropertyRef Name="MODULE_ID" />
+            </Principal>
+            <Dependent Role="BASE_MODULE_BUTTON">
+              <PropertyRef Name="MODULE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="BASE_APPLICATION_ROLESBASE_APPLICATION_ROLE_RIGHT">
+          <End Type="Model.BASE_APPLICATION_ROLES" Role="BASE_APPLICATION_ROLES" Multiplicity="0..1" />
+          <End Type="Model.BASE_APPLICATION_ROLE_RIGHT" Role="BASE_APPLICATION_ROLE_RIGHT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_APPLICATION_ROLES">
+              <PropertyRef Name="APPLICATION_ROLE_ID" />
+            </Principal>
+            <Dependent Role="BASE_APPLICATION_ROLE_RIGHT">
+              <PropertyRef Name="APPLICATION_ROLE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="BASE_USERINFO">
+          <Key>
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="USER_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="COMPANY_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="COMPANY_NAME_CN" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="USERNAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PASSWORD" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="GENDER" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="QUESTION" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ANSWER" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SOURCE_URL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SOURCE_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="LANGUAGE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="USER_TYPE" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="IS_ADMIN" Type="Boolean" Nullable="false" />
+          <Property Name="LOCK_DAY" Type="DateTime" Precision="7" />
+          <Property Name="DELETE_MARK" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="MODIFY_USERNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MODIFY_FULLNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MODIFY_DATE" Type="DateTime" Precision="7" />
+          <Property Name="CREATE_USERNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_FULLNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_DATE" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="BASE_USERROLE" Relationship="Model.BASE_USERINFOBASE_USERROLE" FromRole="BASE_USERINFO" ToRole="BASE_USERROLE" />
+          <Property Name="LastActive" Type="DateTime" Precision="7" />
+        </EntityType>
+        <EntityType Name="BASE_USERROLE">
+          <Key>
+            <PropertyRef Name="USERROLE_ID" />
+          </Key>
+          <Property Name="USERROLE_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="APPLICATION_ROLE_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="USER_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="DELETE_MARK" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="MODIFY_USERNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MODIFY_FULLNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MODIFY_DATE" Type="DateTime" Precision="7" />
+          <Property Name="CREATE_USERNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_FULLNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_DATE" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="BASE_APPLICATION_ROLES" Relationship="Model.BASE_APPLICATION_ROLESBASE_USERROLE" FromRole="BASE_USERROLE" ToRole="BASE_APPLICATION_ROLES" />
+          <NavigationProperty Name="BASE_USERINFO" Relationship="Model.BASE_USERINFOBASE_USERROLE" FromRole="BASE_USERROLE" ToRole="BASE_USERINFO" />
+        </EntityType>
+        <Association Name="BASE_APPLICATION_ROLESBASE_USERROLE">
+          <End Type="Model.BASE_APPLICATION_ROLES" Role="BASE_APPLICATION_ROLES" Multiplicity="0..1" />
+          <End Type="Model.BASE_USERROLE" Role="BASE_USERROLE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_APPLICATION_ROLES">
+              <PropertyRef Name="APPLICATION_ROLE_ID" />
+            </Principal>
+            <Dependent Role="BASE_USERROLE">
+              <PropertyRef Name="APPLICATION_ROLE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="BASE_USERINFOBASE_USERROLE">
+          <End Type="Model.BASE_USERINFO" Role="BASE_USERINFO" Multiplicity="0..1" />
+          <End Type="Model.BASE_USERROLE" Role="BASE_USERROLE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_USERINFO">
+              <PropertyRef Name="USER_ID" />
+            </Principal>
+            <Dependent Role="BASE_USERROLE">
+              <PropertyRef Name="USER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Area">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsLock" Type="Boolean" Nullable="false" />
+          <Property Name="GroupName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Poster">
+          <Key>
+            <PropertyRef Name="PosterID" />
+          </Key>
+          <Property Name="PosterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ExhibitionID" Type="Int32" />
+          <Property Name="InfoID" Type="Int32" />
+          <Property Name="HallID" Type="Int32" />
+          <Property Name="MuseumID" Type="Int32" />
+          <Property Name="Category" Type="Byte" Nullable="false" />
+          <Property Name="OriginDir" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Filename" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="OriginPath" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="RootPath" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Sequence" Type="Int32" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="BASE_APPLICATION_ROLE_RIGHT">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.BASE_APPLICATION_ROLE_RIGHT)">
+        <MappingFragment StoreEntitySet="BASE_APPLICATION_ROLE_RIGHT">
+          <ScalarProperty Name="APPLICATION_ROLE_RIGHT_ID" ColumnName="APPLICATION_ROLE_RIGHT_ID" />
+          <ScalarProperty Name="APPLICATION_ROLE_ID" ColumnName="APPLICATION_ROLE_ID" />
+          <ScalarProperty Name="PERMISSION_TYPE" ColumnName="PERMISSION_TYPE" />
+          <ScalarProperty Name="MODULE_ID" ColumnName="MODULE_ID" />
+          <ScalarProperty Name="BUTTON_ID" ColumnName="BUTTON_ID" />
+          <ScalarProperty Name="AUTHORIZE" ColumnName="AUTHORIZE" />
+          <ScalarProperty Name="CREATE_USERNAME" ColumnName="CREATE_USERNAME" />
+          <ScalarProperty Name="CREATE_FULLNAME" ColumnName="CREATE_FULLNAME" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BASE_APPLICATION_ROLES">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.BASE_APPLICATION_ROLES)">
+        <MappingFragment StoreEntitySet="BASE_APPLICATION_ROLES">
+          <ScalarProperty Name="APPLICATION_ROLE_ID" ColumnName="APPLICATION_ROLE_ID" />
+          <ScalarProperty Name="APPLICATION_ID" ColumnName="APPLICATION_ID" />
+          <ScalarProperty Name="APPLICATION_KEY" ColumnName="APPLICATION_KEY" />
+          <ScalarProperty Name="APPLICATION_CODE" ColumnName="APPLICATION_CODE" />
+          <ScalarProperty Name="APPLICATION_NAME" ColumnName="APPLICATION_NAME" />
+          <ScalarProperty Name="PLATFORM" ColumnName="PLATFORM" />
+          <ScalarProperty Name="PARENT_ID" ColumnName="PARENT_ID" />
+          <ScalarProperty Name="ROLE_NAME" ColumnName="ROLE_NAME" />
+          <ScalarProperty Name="ROLE_RESTRICTION" ColumnName="ROLE_RESTRICTION" />
+          <ScalarProperty Name="ROLE_REMARK" ColumnName="ROLE_REMARK" />
+          <ScalarProperty Name="APPLAY_TO" ColumnName="APPLAY_TO" />
+          <ScalarProperty Name="SEQUENCE" ColumnName="SEQUENCE" />
+          <ScalarProperty Name="SEQUENCE_STRING" ColumnName="SEQUENCE_STRING" />
+          <ScalarProperty Name="DELETE_MARK" ColumnName="DELETE_MARK" />
+          <ScalarProperty Name="MODIFY_USERNAME" ColumnName="MODIFY_USERNAME" />
+          <ScalarProperty Name="MODIFY_FULLNAME" ColumnName="MODIFY_FULLNAME" />
+          <ScalarProperty Name="MODIFY_DATE" ColumnName="MODIFY_DATE" />
+          <ScalarProperty Name="CREATE_USERNAME" ColumnName="CREATE_USERNAME" />
+          <ScalarProperty Name="CREATE_FULLNAME" ColumnName="CREATE_FULLNAME" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BASE_APPLICATIONS">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.BASE_APPLICATIONS)">
+        <MappingFragment StoreEntitySet="BASE_APPLICATIONS">
+          <ScalarProperty Name="APPLICATION_ID" ColumnName="APPLICATION_ID" />
+          <ScalarProperty Name="APPLICATION_KEY" ColumnName="APPLICATION_KEY" />
+          <ScalarProperty Name="APPLICATION_CODE" ColumnName="APPLICATION_CODE" />
+          <ScalarProperty Name="APPLICATION_NAME" ColumnName="APPLICATION_NAME" />
+          <ScalarProperty Name="ICON" ColumnName="ICON" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="BINDING" ColumnName="BINDING" />
+          <ScalarProperty Name="SEQUENCE" ColumnName="SEQUENCE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BASE_BUTTON">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.BASE_BUTTON)">
+        <MappingFragment StoreEntitySet="BASE_BUTTON">
+          <ScalarProperty Name="BUTTON_ID" ColumnName="BUTTON_ID" />
+          <ScalarProperty Name="BUTTON_CODE" ColumnName="BUTTON_CODE" />
+          <ScalarProperty Name="BUTTON_NAME" ColumnName="BUTTON_NAME" />
+          <ScalarProperty Name="BUTTON_TITLE" ColumnName="BUTTON_TITLE" />
+          <ScalarProperty Name="BUTTON_TYPE" ColumnName="BUTTON_TYPE" />
+          <ScalarProperty Name="BUTTON_ICON" ColumnName="BUTTON_ICON" />
+          <ScalarProperty Name="BUTTON_IMG" ColumnName="BUTTON_IMG" />
+          <ScalarProperty Name="BUTTON_EVENT" ColumnName="BUTTON_EVENT" />
+          <ScalarProperty Name="BUTTON_METHOD" ColumnName="BUTTON_METHOD" />
+          <ScalarProperty Name="BUTTON_REMARK" ColumnName="BUTTON_REMARK" />
+          <ScalarProperty Name="SEQUENCE" ColumnName="SEQUENCE" />
+          <ScalarProperty Name="DELETE_MARK" ColumnName="DELETE_MARK" />
+          <ScalarProperty Name="MODIFY_USERNAME" ColumnName="MODIFY_USERNAME" />
+          <ScalarProperty Name="MODIFY_FULLNAME" ColumnName="MODIFY_FULLNAME" />
+          <ScalarProperty Name="MODIFY_DATE" ColumnName="MODIFY_DATE" />
+          <ScalarProperty Name="CREATE_USERNAME" ColumnName="CREATE_USERNAME" />
+          <ScalarProperty Name="CREATE_FULLNAME" ColumnName="CREATE_FULLNAME" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BASE_MODULE">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.BASE_MODULE)">
+        <MappingFragment StoreEntitySet="BASE_MODULE">
+          <ScalarProperty Name="MODULE_ID" ColumnName="MODULE_ID" />
+          <ScalarProperty Name="APPLICATION_ID" ColumnName="APPLICATION_ID" />
+          <ScalarProperty Name="APPLICATION_CODE" ColumnName="APPLICATION_CODE" />
+          <ScalarProperty Name="APPLICATION_NAME" ColumnName="APPLICATION_NAME" />
+          <ScalarProperty Name="PLATFORM" ColumnName="PLATFORM" />
+          <ScalarProperty Name="PARENT_ID" ColumnName="PARENT_ID" />
+          <ScalarProperty Name="MODULE_CODE" ColumnName="MODULE_CODE" />
+          <ScalarProperty Name="MODULE_NAME" ColumnName="MODULE_NAME" />
+          <ScalarProperty Name="MODULE_TYPE" ColumnName="MODULE_TYPE" />
+          <ScalarProperty Name="MODULE_RIGHT_CODE" ColumnName="MODULE_RIGHT_CODE" />
+          <ScalarProperty Name="NAVIGATE_URL" ColumnName="NAVIGATE_URL" />
+          <ScalarProperty Name="QUERY_STRING" ColumnName="QUERY_STRING" />
+          <ScalarProperty Name="DIRECTORY" ColumnName="DIRECTORY" />
+          <ScalarProperty Name="FILENAME" ColumnName="FILENAME" />
+          <ScalarProperty Name="ICON" ColumnName="ICON" />
+          <ScalarProperty Name="IMG" ColumnName="IMG" />
+          <ScalarProperty Name="MODULE_LAYER" ColumnName="MODULE_LAYER" />
+          <ScalarProperty Name="VERSION" ColumnName="VERSION" />
+          <ScalarProperty Name="INFORMATION" ColumnName="INFORMATION" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="SEQUENCE" ColumnName="SEQUENCE" />
+          <ScalarProperty Name="SEQUENCE_STRING" ColumnName="SEQUENCE_STRING" />
+          <ScalarProperty Name="DELETE_MARK" ColumnName="DELETE_MARK" />
+          <ScalarProperty Name="MODIFY_USERNAME" ColumnName="MODIFY_USERNAME" />
+          <ScalarProperty Name="MODIFY_FULLNAME" ColumnName="MODIFY_FULLNAME" />
+          <ScalarProperty Name="MODIFY_DATE" ColumnName="MODIFY_DATE" />
+          <ScalarProperty Name="CREATE_USERNAME" ColumnName="CREATE_USERNAME" />
+          <ScalarProperty Name="CREATE_FULLNAME" ColumnName="CREATE_FULLNAME" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="BUTTON_ID" ColumnName="BUTTON_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BASE_MODULE_BUTTON">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.BASE_MODULE_BUTTON)">
+        <MappingFragment StoreEntitySet="BASE_MODULE_BUTTON">
+          <ScalarProperty Name="MODULE_BUTTON_ID" ColumnName="MODULE_BUTTON_ID" />
+          <ScalarProperty Name="BUTTON_ID" ColumnName="BUTTON_ID" />
+          <ScalarProperty Name="RESPONSE_ID" ColumnName="RESPONSE_ID" />
+          <ScalarProperty Name="MODULE_ID" ColumnName="MODULE_ID" />
+          <ScalarProperty Name="SEQUENCE" ColumnName="SEQUENCE" />
+          <ScalarProperty Name="CREATE_USERNAME" ColumnName="CREATE_USERNAME" />
+          <ScalarProperty Name="CREATE_FULLNAME" ColumnName="CREATE_FULLNAME" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BASE_USERINFO">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.BASE_USERINFO)">
+        <MappingFragment StoreEntitySet="BASE_USERINFO">
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="COMPANY_ID" ColumnName="COMPANY_ID" />
+          <ScalarProperty Name="COMPANY_NAME_CN" ColumnName="COMPANY_NAME_CN" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="QUESTION" ColumnName="QUESTION" />
+          <ScalarProperty Name="ANSWER" ColumnName="ANSWER" />
+          <ScalarProperty Name="SOURCE_URL" ColumnName="SOURCE_URL" />
+          <ScalarProperty Name="SOURCE_NAME" ColumnName="SOURCE_NAME" />
+          <ScalarProperty Name="LANGUAGE" ColumnName="LANGUAGE" />
+          <ScalarProperty Name="USER_TYPE" ColumnName="USER_TYPE" />
+          <ScalarProperty Name="IS_ADMIN" ColumnName="IS_ADMIN" />
+          <ScalarProperty Name="LOCK_DAY" ColumnName="LOCK_DAY" />
+          <ScalarProperty Name="DELETE_MARK" ColumnName="DELETE_MARK" />
+          <ScalarProperty Name="MODIFY_USERNAME" ColumnName="MODIFY_USERNAME" />
+          <ScalarProperty Name="MODIFY_FULLNAME" ColumnName="MODIFY_FULLNAME" />
+          <ScalarProperty Name="MODIFY_DATE" ColumnName="MODIFY_DATE" />
+          <ScalarProperty Name="CREATE_USERNAME" ColumnName="CREATE_USERNAME" />
+          <ScalarProperty Name="CREATE_FULLNAME" ColumnName="CREATE_FULLNAME" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="LastActive" ColumnName="LastActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BASE_USERROLE">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.BASE_USERROLE)">
+        <MappingFragment StoreEntitySet="BASE_USERROLE">
+          <ScalarProperty Name="USERROLE_ID" ColumnName="USERROLE_ID" />
+          <ScalarProperty Name="APPLICATION_ROLE_ID" ColumnName="APPLICATION_ROLE_ID" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="DELETE_MARK" ColumnName="DELETE_MARK" />
+          <ScalarProperty Name="MODIFY_USERNAME" ColumnName="MODIFY_USERNAME" />
+          <ScalarProperty Name="MODIFY_FULLNAME" ColumnName="MODIFY_FULLNAME" />
+          <ScalarProperty Name="MODIFY_DATE" ColumnName="MODIFY_DATE" />
+          <ScalarProperty Name="CREATE_USERNAME" ColumnName="CREATE_USERNAME" />
+          <ScalarProperty Name="CREATE_FULLNAME" ColumnName="CREATE_FULLNAME" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Areas">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.Area)">
+        <MappingFragment StoreEntitySet="Areas">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Posters">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.Poster)">
+        <MappingFragment StoreEntitySet="Posters">
+          <ScalarProperty Name="PosterID" ColumnName="PosterID" />
+          <ScalarProperty Name="ExhibitionID" ColumnName="ExhibitionID" />
+          <ScalarProperty Name="InfoID" ColumnName="InfoID" />
+          <ScalarProperty Name="HallID" ColumnName="HallID" />
+          <ScalarProperty Name="MuseumID" ColumnName="MuseumID" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="OriginDir" ColumnName="OriginDir" />
+          <ScalarProperty Name="Filename" ColumnName="Filename" />
+          <ScalarProperty Name="OriginPath" ColumnName="OriginPath" />
+          <ScalarProperty Name="RootPath" ColumnName="RootPath" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
