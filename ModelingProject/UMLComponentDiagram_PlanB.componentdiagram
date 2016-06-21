@@ -176,14 +176,14 @@
           <providedInterface Id="abfe3563-8e5c-426e-9650-ff927ea7abf4" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
             <elementDefinition Id="9ce3fb26-00a1-4700-88ab-6ab020b792dd" />
             <type_NamedElement>
-              <interfaceMoniker Id="865448d5-4995-47df-bf11-7f48d5899163" LastKnownName="深圳航信电子票接口    " />
+              <interfaceMoniker Id="865448d5-4995-47df-bf11-7f48d5899163" LastKnownName="深圳航信电子票前置服务接口    " />
             </type_NamedElement>
           </providedInterface>
         </ownedAttributesInternal>
       </component>
     </componentModelHasComponents>
     <modelContainsNamedElements>
-      <Interface Id="865448d5-4995-47df-bf11-7f48d5899163" name="深圳航信电子票接口    " isAbstract="false" isLeaf="false">
+      <Interface Id="865448d5-4995-47df-bf11-7f48d5899163" name="深圳航信电子票前置服务接口    " isAbstract="false" isLeaf="false">
         <elementDefinition Id="1e0a4eba-9787-48eb-a6b8-4b51ce54cce4" />
       </Interface>
     </modelContainsNamedElements>

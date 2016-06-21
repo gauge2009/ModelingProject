@@ -89,12 +89,12 @@
           <providedInterfaceMoniker Id="abfe3563-8e5c-426e-9650-ff927ea7abf4" LastKnownName="Port1" />
           <relativeChildShapes />
           <moveableDecoratorHostShapes>
-            <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="0.55071007196753885, 2.8806343078613272, 1.4, 0.15087890625" shapeFieldName="Label" />
+            <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="0.30071007196753885, 2.8806343078613272, 1.9, 0.15087890625" shapeFieldName="Label" />
           </moveableDecoratorHostShapes>
         </providedInterfaceShape>
       </relativeChildShapes>
     </componentShape>
-    <commentConnector edgePoints="[(6.59166666666667 : 3.875); (6.59166666666667 : 3.68333333333333)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
+    <commentConnector edgePoints="[(6.59166666666667 : 3.875); (6.59166666666667 : 3.68333333333333)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
       <relativeChildShapes />
       <nodes>
         <commentShapeMoniker Id="65046742-a67a-4cf9-b8dd-f042c76054d1" />
