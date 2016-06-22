@@ -22,7 +22,28 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="DOC\ConceptualDataModel.cdm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\output\EntityDesignerDiagram.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\output\物业公司自助终端体系结构设计文档-Git-preview.docx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\output\物业终端及服务平台系统组件图-621.pdf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\output\物业终端系统组件图.png">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="DOC\pdWorkspace1.sws">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\PhysicalDataModel.pdb">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\PhysicalDataModel.pdm">
       <SubType>Content</SubType>
     </Content>
     <Content Include="DOC\住宅物业无卡通行系统-系统架构概要图.vsdx">
@@ -35,6 +56,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="DOC\智慧云社区PackageDiagram.oom">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\物业公司自助终端体系结构设计文档-Git-preview.docx">
       <SubType>Content</SubType>
     </Content>
     <Content Include="DOC\物业公司自助终端体系结构设计文档-Git.docx">
@@ -79,6 +103,7 @@
       <SubType>Content</SubType>
       <DependentUpon>UMLComponentDiagram_PlanB.componentdiagram</DependentUpon>
     </Content>
+    <Folder Include="DOC\output\" />
     <Folder Include="DOC\需求文档\" />
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\ModelingProject.uml">

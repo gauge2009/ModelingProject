@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SZ.Aisino.IntellEstate.DbContext
+namespace SZ.Aisino.IntellEstate.DbContext.UC
 {
     using System;
     using System.Data.Entity;

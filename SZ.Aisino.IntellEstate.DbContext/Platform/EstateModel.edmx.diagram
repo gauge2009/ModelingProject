@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aac0f02251d9435e90fe4fea15538a7d" Name="Diagram1" ZoomLevel="87" >
+        <EntityTypeShape EntityType="EstateModel.Company" Width="3" PointX="1.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EstateModel.Customer" Width="1.5" PointX="10.625" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EstateModel.Base_Location" Width="2" PointX="6.75" PointY="2" FillColor="DarkSlateGray" IsExpanded="true" />
+        <EntityTypeShape EntityType="EstateModel.Payment_Order" Width="2.25" PointX="1.25" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EstateModel.Payment_Order_Detail" Width="2.875" PointX="4.375" PointY="12.375" IsExpanded="true" />
+        <AssociationConnector Association="EstateModel.Payment_OrderPayment_Order_Detail" />
+        <EntityTypeShape EntityType="EstateModel.Business" Width="1.5" PointX="5" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EstateModel.Currency_By_Company" Width="2.625" PointX="1" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EstateModel.Currency_Rate" Width="2.25" PointX="9.375" PointY="2" FillColor="DarkSlateGray" IsExpanded="true" />
+        <EntityTypeShape EntityType="EstateModel.Customer_Contact" Width="2.25" PointX="10" PointY="9" IsExpanded="true" />
+        <AssociationConnector Association="EstateModel.CustomerCustomer_Contact" />
+        <EntityTypeShape EntityType="EstateModel.Logger" Width="1.5" PointX="1.75" PointY="2" FillColor="Maroon" IsExpanded="true" />
+        <EntityTypeShape EntityType="EstateModel.Soap_Backup" Width="2.125" PointX="4" PointY="2" FillColor="Maroon" IsExpanded="true" />
+        <EntityTypeShape EntityType="EstateModel.Payment_Order_Trace" Width="2.75" PointX="9" PointY="12.75" IsExpanded="true" />
+        <AssociationConnector Association="EstateModel.Payment_OrderPayment_Order_Trace" />
+        <AssociationConnector Association="EstateModel.CompanyCurrency_By_Company" />
+        <AssociationConnector Association="EstateModel.CompanyBusiness" />
+        <AssociationConnector Association="EstateModel.CustomerBusiness" />
+        <EntityTypeShape EntityType="EstateModel.Company_Contact" Width="2" PointX="4.125" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EstateModel.Company_Contract" Width="2.25" PointX="7.125" PointY="9.75" IsExpanded="true" />
+        <AssociationConnector Association="EstateModel.CompanyCompany_Contact" />
+        <AssociationConnector Association="EstateModel.CompanyCompany_Contract" />
+        <EntityTypeShape EntityType="EstateModel.Fee_Type" Width="1.5" PointX="2.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EstateModel.Company_Fee" Width="1.625" PointX="5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EstateModel.Customer_Fee" Width="2.5" PointX="7.375" PointY="3.875" IsExpanded="true" />
+        <AssociationConnector Association="EstateModel.CustomerCustomer_Fee" />
+        <AssociationConnector Association="EstateModel.FeeCustomer_Fee" />
+        <AssociationConnector Association="EstateModel.Fee_TypeFee" />
+        <AssociationConnector Association="EstateModel.CompanyCompany_Fee" />
+        <EntityTypeShape EntityType="EstateModel.Company_Fee_Detail" Width="2.25" PointX="7.375" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="EstateModel.Company_FeeCompany_Fee_Detail" />
+        <AssociationConnector Association="EstateModel.Payment_Order_DetailCustomer_Fee" ManuallyRouted="false" >
+        </AssociationConnector>
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

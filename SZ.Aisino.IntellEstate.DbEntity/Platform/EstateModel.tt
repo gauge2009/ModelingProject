@@ -3,7 +3,7 @@
 <#@ include file="EF.Utility.CS.ttinclude"#><#@ 
  output extension=".cs"#><#
 
-     const string inputFile = @"..\SZ.Aisino.IntellEstate.DbContext\UC\Model1.edmx";
+     const string inputFile = @"..\..\SZ.Aisino.IntellEstate.DbContext\Platform\EstateModel.edmx";
     var textTransform = DynamicTextTransformation.Create(this);
     var code = new CodeGenerationTools(this);
     var ef = new MetadataTools(this);
