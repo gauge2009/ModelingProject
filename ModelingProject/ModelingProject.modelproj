@@ -28,13 +28,13 @@
     <Content Include="DOC\output\EntityDesignerDiagram.png">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="DOC\output\物业公司自助终端体系结构设计文档-Git-preview.docx">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="DOC\output\物业终端及服务平台系统组件图-621.pdf">
       <SubType>Content</SubType>
     </Content>
     <Content Include="DOC\output\物业终端系统组件图.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\output\物业自助终端及服务平台体系结构设计文档（概要设计）V1.3B.0622.docx">
       <SubType>Content</SubType>
     </Content>
     <Content Include="DOC\pdWorkspace1.sws">
