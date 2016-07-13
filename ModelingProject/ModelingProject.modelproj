@@ -52,6 +52,18 @@
     <Content Include="DOC\住宅物业无卡通行系统-网络框架图.vsdx">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="DOC\招商地产应用部署架构.vsdx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\招商地产应用部署架构图.vsdx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\招商地产应用部署架构图1.1A.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\招商地产应用部署架构文档1.1A.docx">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="DOC\智慧云社区PackageDiagram.oob">
       <SubType>Content</SubType>
     </Content>
@@ -77,6 +89,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="DOC\需求文档\航天物业电子发票_产品需求文档_20160615更新-Qst617_by_zrz.docx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\需求文档\航天物业电子发票_产品需求文档_20160621更新.docx">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Graph.dgml">
