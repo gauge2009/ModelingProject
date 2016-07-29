@@ -46,10 +46,58 @@
     <Content Include="DOC\PhysicalDataModel.pdm">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="DOC\V1.4.0726.docx">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="DOC\住宅物业无卡通行系统-系统架构概要图.vsdx">
       <SubType>Content</SubType>
     </Content>
     <Content Include="DOC\住宅物业无卡通行系统-网络框架图.vsdx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\增值税管理云平台网络技术架构图 -  扩展1.vsdx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\增值税管理云平台网络技术架构图 -  扩展2.vsdx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\增值税管理云平台网络技术架构图 -  扩展3.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\增值税管理云平台网络技术架构图 -  扩展3.vsdx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\增值税管理云平台网络技术架构图-png.zip">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\增值税管理云平台网络技术架构图-初始形态.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\增值税管理云平台网络技术架构图-扩展1.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\增值税管理云平台网络技术架构图-扩展2.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\增值税管理云平台网络技术架构图.vsdx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\增值税管理云平台网络技术架构图1.3.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\增值税管理云平台网络技术架构图_1.4.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\增值税管理云平台网络技术架构备选方案说明文档 - 1.2B.docx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\增值税管理云平台网络技术架构备选方案说明文档 - 1.3.docx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\增值税管理云平台网络技术架构备选方案说明文档 - 1.4.docx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\增值税管理云平台网络技术架构备选方案说明文档.docx">
       <SubType>Content</SubType>
     </Content>
     <Content Include="DOC\招商地产应用部署架构.vsdx">
@@ -64,16 +112,43 @@
     <Content Include="DOC\招商地产应用部署架构文档1.1A.docx">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="DOC\招商蛇口VAT系统应用部署架构图.vsdx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\招商蛇口VAT系统应用部署架构图1.1A.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\招商蛇口VAT系统应用部署架构图1.1B.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\招商蛇口VAT系统应用部署架构文档1.1A.docx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\招商蛇口VAT系统应用部署架构文档1.1B.docx">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="DOC\智慧云社区PackageDiagram.oob">
       <SubType>Content</SubType>
     </Content>
     <Content Include="DOC\智慧云社区PackageDiagram.oom">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="DOC\物业公司自助终端体系结构设计文档-1.4.docx">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="DOC\物业公司自助终端体系结构设计文档-Git-preview.docx">
       <SubType>Content</SubType>
     </Content>
     <Content Include="DOC\物业公司自助终端体系结构设计文档-Git.docx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\物业公司自助终端体系结构设计文档.docx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\物业自助终端及服务平台体系结构设计文档（概要设计）V1.4.docx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\物业自助终端及服务平台体系结构设计文档（概要设计）V1.4A.docx">
       <SubType>Content</SubType>
     </Content>
     <Content Include="DOC\物业自助终端系统组件架构图-单一物业模式.oom">
@@ -86,6 +161,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="DOC\需求文档\~WRL1501.tmp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\需求文档\招商蛇口_VAT系统服务器设计架构及部署相关事项、干系人员20160706.docx">
       <SubType>Content</SubType>
     </Content>
     <Content Include="DOC\需求文档\航天物业电子发票_产品需求文档_20160615更新-Qst617_by_zrz.docx">
