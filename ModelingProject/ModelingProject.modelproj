@@ -22,31 +22,7 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-    <Content Include="DOC\ConceptualDataModel.cdm">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="DOC\output\EntityDesignerDiagram.png">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="DOC\output\物业终端及服务平台系统组件图-621.pdf">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="DOC\output\物业终端系统组件图.png">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="DOC\output\物业自助终端及服务平台体系结构设计文档（概要设计）V1.3B.0622.docx">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="DOC\pdWorkspace1.sws">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="DOC\PhysicalDataModel.pdb">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="DOC\PhysicalDataModel.pdm">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="DOC\V1.4.0726.docx">
+    <Content Include="DOC\企业分布式数据存储与云计算方案预研报告.docx">
       <SubType>Content</SubType>
     </Content>
     <Content Include="DOC\住宅物业无卡通行系统-系统架构概要图.vsdx">
@@ -100,18 +76,6 @@
     <Content Include="DOC\增值税管理云平台网络技术架构备选方案说明文档.docx">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="DOC\招商地产应用部署架构.vsdx">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="DOC\招商地产应用部署架构图.vsdx">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="DOC\招商地产应用部署架构图1.1A.png">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="DOC\招商地产应用部署架构文档1.1A.docx">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="DOC\招商蛇口VAT系统应用部署架构图.vsdx">
       <SubType>Content</SubType>
     </Content>
@@ -136,6 +100,9 @@
     <Content Include="DOC\物业公司自助终端体系结构设计文档-1.4.docx">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="DOC\物业公司自助终端体系结构设计文档-1.5.docx">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="DOC\物业公司自助终端体系结构设计文档-Git-preview.docx">
       <SubType>Content</SubType>
     </Content>
@@ -151,25 +118,22 @@
     <Content Include="DOC\物业自助终端及服务平台体系结构设计文档（概要设计）V1.4A.docx">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="DOC\物业自助终端及服务平台体系结构设计文档（概要设计）V1.5A.docx">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="DOC\物业自助终端系统组件架构图-单一物业模式.oom">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\物业自助终端系统组件架构图-服务平台模式 - 候选方案.oob">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DOC\物业自助终端系统组件架构图-服务平台模式 - 候选方案.oom">
       <SubType>Content</SubType>
     </Content>
     <Content Include="DOC\物业自助终端系统组件架构图-服务平台模式.oob">
       <SubType>Content</SubType>
     </Content>
     <Content Include="DOC\物业自助终端系统组件架构图-服务平台模式.oom">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="DOC\需求文档\~WRL1501.tmp">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="DOC\需求文档\招商蛇口_VAT系统服务器设计架构及部署相关事项、干系人员20160706.docx">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="DOC\需求文档\航天物业电子发票_产品需求文档_20160615更新-Qst617_by_zrz.docx">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="DOC\需求文档\航天物业电子发票_产品需求文档_20160621更新.docx">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Graph.dgml">
@@ -231,8 +195,6 @@
       <SubType>Content</SubType>
       <DependentUpon>物业管理系统--服务平台集成方案4.componentdiagram</DependentUpon>
     </Content>
-    <Folder Include="DOC\output\" />
-    <Folder Include="DOC\需求文档\" />
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\ModelingProject.uml">
       <SubType>Content</SubType>
