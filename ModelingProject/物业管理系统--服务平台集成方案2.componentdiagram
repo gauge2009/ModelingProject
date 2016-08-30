@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="908f3073-b2e6-4d64-9ba0-1f8fc16a606a" name="物业管理系统--服务平台集成方案2" linkedPackageId="6e7f2433-fe9b-4c52-9182-a09d3c04fcb9" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <ownedCommentsInternal>
+    <comment Id="96f3842e-0e39-45d8-af54-ee95c9c6ba2e">
+      <elementDefinition Id="a584734a-4e8d-4268-b93f-1a82f653e2d0" />
+      <body>直连物业数据库，做视图查询
+</body>
+      <annotatedElements>
+        <componentMoniker Id="710ac3a3-41f7-4862-89b8-ff4de9b4d557" LastKnownName="物业端- 通用状态适配器" />
+      </annotatedElements>
+    </comment>
+    <comment Id="236a62a4-a7c2-4b4e-920e-c8cf96924512">
+      <elementDefinition Id="609b32e5-835f-4e92-bfe1-b62cad51c0b4" />
+      <body>直接修改或通过中间表实现数据一致性</body>
+      <annotatedElements>
+        <componentMoniker Id="710ac3a3-41f7-4862-89b8-ff4de9b4d557" LastKnownName="物业端- 通用状态适配器" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="beac0c61-82f6-4bfd-844a-fe7685e5c69c">
+      <profileInstance Id="8ccd23d5-6969-4956-bb5c-8a7071c5913e" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="4cffaced-754c-4600-9e0c-b04d42dcdc4a">
+      <profileInstance Id="dcc11a6f-bbf8-4de6-8857-bd7d31f54cbb" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="0480635d-e3a4-441d-b409-f4cbcc87f865" name="智慧云社区（互联网服务平台）11" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3c3d3103-848d-4653-b27e-71d460fe4da3" />
+        <ownedAttributesInternal>
+          <requiredInterface Id="6460df8b-5804-425a-b066-8134e980cf6c" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="ee252f33-c735-4ca4-b39f-c632a0b52715" />
+            <suppliersInternal>
+              <dependency Id="d6be1233-fe41-4338-807d-e7a024d43e64">
+                <providedInterfaceMoniker Id="ad5a3716-1625-4447-8b5a-b780d63e530e" LastKnownName="Port1" />
+                <elementDefinition Id="189b148d-f400-45a4-a2c2-ebb42b686dd0" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="66a66187-4fb4-404f-818e-02b2db167c00" LastKnownName="通过互联网查询物业端的通用适配器" />
+            </type_NamedElement>
+          </requiredInterface>
+          <requiredInterface Id="dd760a1b-09b8-490b-a586-20b2fceff807" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="aa377667-b09b-4c1c-9749-a5005e10ad8e" />
+            <suppliersInternal>
+              <dependency Id="c97b4baf-72ad-41d7-9b62-676c33730354">
+                <providedInterfaceMoniker Id="f7f7d6e2-4701-4e5a-a65a-943c024fd3ba" LastKnownName="Port2" />
+                <elementDefinition Id="233e5278-244a-4565-86a7-a7c886fb2b57" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="c5a15ec4-379e-41d4-b1fc-c0030b9e3c7c" LastKnownName="同步结算中心的缴费状态到物业端" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="66a66187-4fb4-404f-818e-02b2db167c00" name="通过互联网查询物业端的通用适配器" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="595235c3-f798-4eb3-818a-cf9f67b07ab0" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="710ac3a3-41f7-4862-89b8-ff4de9b4d557" name="物业端- 通用状态适配器" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c5a73764-6464-40c6-8376-8e4025bc0fd3" />
+        <ownedAttributesInternal>
+          <providedInterface Id="ad5a3716-1625-4447-8b5a-b780d63e530e" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="815e3b24-4f97-4baf-bc8b-1b3ff64315dd" />
+            <type_NamedElement>
+              <interfaceMoniker Id="357211b8-2655-46bc-b7e7-a9738d574149" LastKnownName="通用查询接口     " />
+            </type_NamedElement>
+          </providedInterface>
+          <providedInterface Id="f7f7d6e2-4701-4e5a-a65a-943c024fd3ba" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="ed071fcb-c506-4f40-abea-7e1fab7f8afc" />
+            <type_NamedElement>
+              <interfaceMoniker Id="fd58da9a-64ee-41cb-924a-d4a96cdf55af" LastKnownName="同步缴费状态到物业管理系统数据库" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="357211b8-2655-46bc-b7e7-a9738d574149" name="通用查询接口     " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="26a2da61-c70a-4292-ae56-164f30e06b21" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="c5a15ec4-379e-41d4-b1fc-c0030b9e3c7c" name="同步结算中心的缴费状态到物业端" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b17dd946-f13d-4492-bf34-6de8aa1e5e1a" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="fd58da9a-64ee-41cb-924a-d4a96cdf55af" name="同步缴费状态到物业管理系统数据库" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3f1f2542-e13c-41ba-b8ed-d4e56ed206e8" />
+      </Interface>
+    </modelContainsNamedElements>
+  </packagedElements>
+  <package Id="6e7f2433-fe9b-4c52-9182-a09d3c04fcb9" name="ModelingProject">
+    <elementDefinition Id="e027e3c6-a077-49a5-a50b-98e4104a486e" />
+  </package>
+</componentModel>

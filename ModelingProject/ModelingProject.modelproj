@@ -196,6 +196,41 @@
       <SubType>Content</SubType>
       <DependentUpon>UMLComponentDiagram_PlanB.componentdiagram</DependentUpon>
     </Content>
+    <Content Include="UMLSequenceDiagram1.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceDiagram1.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceDiagram1.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="物业管理系统--服务平台集成方案1.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="物业管理系统--服务平台集成方案1.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>物业管理系统--服务平台集成方案1.componentdiagram</DependentUpon>
+    </Content>
+    <Content Include="物业管理系统--服务平台集成方案2.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="物业管理系统--服务平台集成方案2.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>物业管理系统--服务平台集成方案2.componentdiagram</DependentUpon>
+    </Content>
+    <Content Include="物业管理系统--服务平台集成方案3.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="物业管理系统--服务平台集成方案3.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>物业管理系统--服务平台集成方案3.componentdiagram</DependentUpon>
+    </Content>
+    <Content Include="物业管理系统--服务平台集成方案4.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="物业管理系统--服务平台集成方案4.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>物业管理系统--服务平台集成方案4.componentdiagram</DependentUpon>
+    </Content>
     <Folder Include="DOC\output\" />
     <Folder Include="DOC\需求文档\" />
     <Folder Include="ModelDefinition\" />

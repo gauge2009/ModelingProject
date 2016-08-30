@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="5687a892-4a08-45d6-ab6a-f496900cd767" name="物业管理系统--服务平台集成方案4" linkedPackageId="10f70c9e-0d08-4170-9fce-ca8a341db96c" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="daf4e32e-eec1-49e3-9772-45680f486b97">
+      <profileInstance Id="cd03cce0-7fa8-45f2-bad4-657d0bc99daf" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="09a96913-1d90-4190-acb1-ac19734c1f6c">
+      <profileInstance Id="a6b94bd4-0f02-42b8-9a26-037e98ee9dee" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="fd97f893-4dcc-4436-a0ca-fb630b7fc38b" name="智慧云社区（互联网服务平台）121" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f5863d70-4eaa-4bdf-a91a-f53ab280f9cb" />
+        <ownedAttributesInternal>
+          <requiredInterface Id="5e26b806-efd9-482a-a8f5-26cae4fc27a4" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="2503acd2-9a58-4c22-90f7-3de4d98270b4" />
+            <suppliersInternal>
+              <dependency Id="f6e928e9-2e72-4969-953e-561b4cf2282b">
+                <providedInterfaceMoniker Id="04c356d7-f971-4bbd-b1fa-fb7ee899fc24" LastKnownName="Port4" />
+                <elementDefinition Id="62647b65-4f3a-4514-91cc-108f64105b13" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="c1041063-2775-4034-b8cb-6a23192d2912" LastKnownName="同步结算中心的缴费状态到物业端" />
+            </type_NamedElement>
+          </requiredInterface>
+          <providedInterface Id="af74e3a0-3ac0-4fb6-bec7-fad1688a7c30" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="faa39509-1884-4b55-b15c-7efb8d209d51" />
+            <type_NamedElement>
+              <interfaceMoniker Id="522d0ddf-a41c-4d8c-b9cc-080edff3ae9c" LastKnownName="上传云端" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="c1041063-2775-4034-b8cb-6a23192d2912" name="同步结算中心的缴费状态到物业端" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f470c120-8cc5-4c80-8e34-5eaac0b98c6d" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="522d0ddf-a41c-4d8c-b9cc-080edff3ae9c" name="上传云端" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e2a6b2d1-998e-4d79-b14a-5eb122dd5b90" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="90f19d6a-0b12-44df-b34a-df35977bf5fd" name="物业端-通用状态适配器11" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ef411c68-f7ac-4c37-a9ad-7506da32aac4" />
+        <ownedAttributesInternal>
+          <providedInterface Id="04c356d7-f971-4bbd-b1fa-fb7ee899fc24" name="Port4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="6dd93670-bb96-42b8-832e-34d8cf2888a6" />
+            <type_NamedElement>
+              <interfaceMoniker Id="eb980754-fb0a-40b4-8229-27c372482f37" LastKnownName="同步缴费状态" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface Id="4660bbc7-0c8b-434e-b873-d78d48f0e5b7" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="62d2703b-1343-4828-92ce-371ba76b7b7d" />
+            <suppliersInternal>
+              <dependency Id="c67b91c0-2bcf-4f48-9289-3b2c5f420bf8">
+                <providedInterfaceMoniker Id="af74e3a0-3ac0-4fb6-bec7-fad1688a7c30" LastKnownName="Port1" />
+                <elementDefinition Id="c35302fa-3698-4044-878a-8321dd152193" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="858f1e4d-8559-4719-8d67-c52ffab4db13" LastKnownName="以一定频度和策略自动将物业端的本期数据分批次上传云端" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="eb980754-fb0a-40b4-8229-27c372482f37" name="同步缴费状态" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8993ec15-3eb9-4159-a0fa-a7c2afe71fe2" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="858f1e4d-8559-4719-8d67-c52ffab4db13" name="以一定频度和策略自动将物业端的本期数据分批次上传云端" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="72a6d3fb-158c-49bc-a4e2-2819c9dd76b5" />
+      </Interface>
+    </modelContainsNamedElements>
+  </packagedElements>
+  <package Id="10f70c9e-0d08-4170-9fce-ca8a341db96c" name="ModelingProject">
+    <elementDefinition Id="e027e3c6-a077-49a5-a50b-98e4104a486e" />
+  </package>
+</componentModel>
