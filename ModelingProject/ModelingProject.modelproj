@@ -97,6 +97,9 @@
     <Content Include="DOC\智慧云社区PackageDiagram.oom">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="DOC\物业公司自助终端体系结构设计文档%28原始模板%29.docx">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="DOC\物业公司自助终端体系结构设计文档-1.4.docx">
       <SubType>Content</SubType>
     </Content>
@@ -106,10 +109,7 @@
     <Content Include="DOC\物业公司自助终端体系结构设计文档-Git-preview.docx">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="DOC\物业公司自助终端体系结构设计文档-Git.docx">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="DOC\物业公司自助终端体系结构设计文档.docx">
+    <Content Include="DOC\物业公司自助终端体系结构设计文档-Git.原始模板.docx">
       <SubType>Content</SubType>
     </Content>
     <Content Include="DOC\物业自助终端及服务平台体系结构设计文档（概要设计）V1.4.docx">
