@@ -195,6 +195,13 @@
       <SubType>Content</SubType>
       <DependentUpon>物业管理系统--服务平台集成方案4.componentdiagram</DependentUpon>
     </Content>
+    <Content Include="电子票凭据管理系统组件图.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="电子票凭据管理系统组件图.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>电子票凭据管理系统组件图.componentdiagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\ModelingProject.uml">
       <SubType>Content</SubType>

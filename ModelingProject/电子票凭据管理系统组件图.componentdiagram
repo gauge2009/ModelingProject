@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="4fae1278-8bf1-4656-b2f9-dbf87e9ff461" name="电子票凭据管理系统组件图" linkedPackageId="720aea38-b554-41db-bb76-0898a9c6541f" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <ownedCommentsInternal>
+    <comment Id="3fbfe7e9-c028-4e3d-a35a-a067782a2dce">
+      <elementDefinition Id="dff2dea5-5b6c-4dca-979d-3672bca3e01e" />
+      <annotatedElements>
+        <componentMoniker Id="849ea6b9-4218-4be7-acd6-2548f4648a79" LastKnownName="电子票凭据管理系统 客户代理服务器" />
+      </annotatedElements>
+    </comment>
+    <comment Id="a8c338a4-4bfe-4d8c-8717-a5e5fc404fde">
+      <elementDefinition Id="bff3cc60-0a00-4d5f-b83f-0e2a5917bb36" />
+      <body>
+</body>
+      <annotatedElements>
+        <componentMoniker Id="3f4d1b88-260e-4d58-a39d-721ec1dc20d5" LastKnownName="电子票凭据管理 客户端" />
+      </annotatedElements>
+    </comment>
+    <comment Id="60bbf701-cc5c-48a8-ae94-93f0a659d99a">
+      <elementDefinition Id="c8c15589-83fa-44e7-970e-26e2602ce99f" />
+      <body>客户凭据验证封装为服务；
+
+</body>
+      <annotatedElements>
+        <partMoniker Id="a7541710-3474-4529-8be6-88bd42f012e0" LastKnownName="客户凭据管与授权理" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="377498e2-501d-4028-a825-05258a708a94">
+      <profileInstance Id="02c58486-b352-4620-b989-d98780432a24" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="42e99929-cee0-430a-a60b-426f899484ca">
+      <profileInstance Id="d968c1d3-aca5-4869-9953-bce5caae0878" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="98f9a02a-520f-42d2-865d-bb6b04a9fb1e" name="电子票凭据管理系统-服务平台（SOA）" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="08636c30-28d1-4352-984b-97d80fdf3598" />
+        <ownedAttributesInternal>
+          <providedInterface Id="9c967e7a-576f-4fb5-9f74-ac30bfa0f016" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="a249e2f0-94e2-4f4c-871f-4051aea55c81" />
+            <targetNamedElementsInternal>
+              <connector Id="3aed642c-e47b-4476-bd29-78f99a37e725" isLeaf="false" isStatic="false">
+                <partMoniker Id="746e408b-e7d8-4696-a4f1-4938fbe2bd0f" LastKnownName="进项数据查验" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="ff13bc8e-dc85-41bc-b9d1-3bec7f81b4dc">
+                      <elementDefinition Id="882fd97f-7fb9-46df-9c24-c290af5b582b" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="fa5f7768-5ff9-4571-a4e8-be41fcc9f6aa">
+                      <elementDefinition Id="60f20026-6f1e-4580-997d-42e0cc945093" />
+                      <portWithPart>
+                        <providedInterfaceMoniker Id="6d6fdf6c-1cd1-47d0-bd77-3eaed81d1d6d" LastKnownName="Port1" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="0b044c13-f479-4cd7-83ad-c1612b259d4a" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="cb98335a-42a1-4209-9c83-aa1e01e2cedb" LastKnownName="进项查验接口" />
+            </type_NamedElement>
+          </providedInterface>
+          <providedInterface Id="b88e2def-a851-4e36-9c7d-2cb0851d50e5" name="Port3" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="7b931934-aa8d-4456-9ce0-dc00f1493dd3" />
+            <targetNamedElementsInternal>
+              <connector Id="17ac7cda-78ec-4008-a722-1095eee2c35b" isLeaf="false" isStatic="false">
+                <partMoniker Id="74c1bc3f-bbda-49fe-86ed-9949dbeef42f" LastKnownName="销项数据下载" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="a0af3547-e85e-4479-8f6a-05b93d75eb62">
+                      <elementDefinition Id="69fcd93e-e926-401a-9e6d-210d8a74b6bf" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="b5f0cbdf-c899-4524-88f9-50e9ec5508c7">
+                      <elementDefinition Id="fc4d04ab-828b-4c23-83a7-ce1205e585c5" />
+                      <portWithPart>
+                        <providedInterfaceMoniker Id="fffb6957-3dd0-4f0b-9aad-05c5ae9a5aa4" LastKnownName="Port1" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="0f2cf6bb-48f4-4cd8-a2bd-5f1622a45c07" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="4471a1cc-2925-4bbe-94ed-6b3eb6b5a104" LastKnownName="销向拉取接口" />
+            </type_NamedElement>
+          </providedInterface>
+          <part Id="a7541710-3474-4529-8be6-88bd42f012e0" name="客户凭据管与授权理" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="b8fc6118-3ca4-441f-8f13-d1212960c655" />
+            <type_NamedElement>
+              <componentMoniker Id="cec77b77-e145-4cb9-9fee-0a3c6fd97e40" LastKnownName="Customer" />
+            </type_NamedElement>
+          </part>
+          <part Id="74c1bc3f-bbda-49fe-86ed-9949dbeef42f" name="销项数据下载" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="c996c87a-6119-4245-ae30-4c40e3e1e704" />
+            <targetNamedElementsInternal>
+              <connector Id="8864d149-7ffb-4535-9185-1af68c049651" isLeaf="false" isStatic="false">
+                <requiredInterfaceMoniker Id="b6e41c7a-3789-4c74-a8b0-2f6e37c5decf" LastKnownName="Port4" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="4c1a07a2-8cbc-4590-9edf-855df453bc0c">
+                      <elementDefinition Id="36ce6bab-f461-45c9-a809-63f0ef1e4235" />
+                      <portWithPart>
+                        <requiredInterfaceMoniker Id="c7c72963-5def-4b5f-8ef0-76cee5c3e793" LastKnownName="Port2" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="120fe53c-c7d0-430d-aa02-ee46f7cfc4e0">
+                      <elementDefinition Id="4eccfa8c-536a-4d33-9c21-8714b8f53772" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="6c542d38-f429-4b91-8c51-479609476de1" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <componentMoniker Id="2b6a79f4-7cae-44b4-85b8-99f6f989eb2a" LastKnownName="SaleInvoice" />
+            </type_NamedElement>
+          </part>
+          <part Id="746e408b-e7d8-4696-a4f1-4938fbe2bd0f" name="进项数据查验" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="70a1162e-a8a5-44e4-8673-1b150e019250" />
+            <targetNamedElementsInternal>
+              <connector Id="40f6f1d1-22d9-47e6-bfaa-d32e62303be5" isLeaf="false" isStatic="false">
+                <requiredInterfaceMoniker Id="23e78ff5-f8da-41a9-b4c9-1326a407c68b" LastKnownName="Port5" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="06586b1d-5297-4b67-bfc5-fcd40a58ed41">
+                      <elementDefinition Id="b8385436-08f1-48ad-82a9-57ca171fd64f" />
+                      <portWithPart>
+                        <requiredInterfaceMoniker Id="9b4e5e83-b3e1-4023-9b83-b9bbb35ce288" LastKnownName="Port2" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="a1e71cc2-1f9d-4e8b-a636-d787f52d8bb7">
+                      <elementDefinition Id="99bf47a0-2bb5-4655-aa76-1c230cda105b" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="136ecb41-b7b0-45d3-b8b1-96cd11723d5d" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <componentMoniker Id="c4d2e107-61ef-4ce7-a5a5-b57b92dbbeac" LastKnownName="InvoiceCheck" />
+            </type_NamedElement>
+          </part>
+          <providedInterface Id="db9485bc-80a6-4e13-81c5-60f1f3e15fdb" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="629a586b-e830-40ca-adca-e9e614f03b28" />
+            <targetNamedElementsInternal>
+              <connector Id="3913fa31-f7e6-4230-841a-89c2ae60098f" isLeaf="false" isStatic="false">
+                <partMoniker Id="a7541710-3474-4529-8be6-88bd42f012e0" LastKnownName="客户凭据管与授权理" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="29c56753-ad96-467c-9558-e57400b17211">
+                      <elementDefinition Id="1134a614-87cb-4733-8fc6-35a9be34ebbb" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="83039273-8be9-4963-9ca7-87e52cb9b086">
+                      <elementDefinition Id="5f5d84f0-fbef-4aed-b7d8-1150e9f03614" />
+                      <portWithPart>
+                        <providedInterfaceMoniker Id="7f326ee9-13a1-4db3-9d7c-071ca61b5a2c" LastKnownName="Port1" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="e5d3def0-8685-4c08-8fc3-28ada1f49460" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="5fd8918a-b30a-4212-83a4-05da5429d2fe" LastKnownName="客户凭据验证接口" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface Id="b6e41c7a-3789-4c74-a8b0-2f6e37c5decf" name="Port4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="39bd7612-fd38-444b-b218-55ed471b5406" />
+            <suppliersInternal>
+              <dependency Id="f9cc3981-a46b-4038-9133-3eb7cf9beb3c">
+                <providedInterfaceMoniker Id="dc9eaba7-307c-4169-9e57-7f432000b59c" LastKnownName="Port1" />
+                <elementDefinition Id="76fc1e05-4da4-4f38-b4dd-850475daedc6" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="30242efc-b94b-4cd9-a9b9-c0a79da1aa1c" LastKnownName="下载" />
+            </type_NamedElement>
+          </requiredInterface>
+          <requiredInterface Id="23e78ff5-f8da-41a9-b4c9-1326a407c68b" name="Port5" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="db5960e8-6051-4cd3-a0b6-96ebcdaad8d4" />
+            <suppliersInternal>
+              <dependency Id="0e66c23f-ce65-4b21-981c-6541622abf99">
+                <providedInterfaceMoniker Id="8d3735bd-56c1-45a7-96a9-013a7a1bb53a" LastKnownName="Port1" />
+                <elementDefinition Id="2c8e7887-2669-4c2e-b441-91a8884d5f56" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="b923dde0-156e-4247-b4de-8c6fb0284f7a" LastKnownName="上传/查验" />
+            </type_NamedElement>
+          </requiredInterface>
+          <providedInterface Id="5d022052-dc58-4881-afbf-a2bb91426316" name="Port6" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="89293b9e-d808-4178-8d65-d78a8d7f63bd" />
+            <targetNamedElementsInternal>
+              <connector Id="2737c09e-b374-4ee5-a5b6-ac824bc953eb" isLeaf="false" isStatic="false">
+                <partMoniker Id="a7541710-3474-4529-8be6-88bd42f012e0" LastKnownName="客户凭据管与授权理" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="7b4d04f2-47ec-4cd0-b64e-4b8d75b4b05a">
+                      <elementDefinition Id="7279ca60-0b66-4330-9c21-73ee0c9ca0d5" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="6f9a0c4f-c109-4de5-8342-d641759ac65e">
+                      <elementDefinition Id="b1078a17-fc23-47e0-bfe9-40b69cf48cc7" />
+                      <portWithPart>
+                        <providedInterfaceMoniker Id="66906437-6fd4-4740-8fdd-bbeba2321407" LastKnownName="Port2" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="a301f6e1-1fb5-49b8-8bf6-c07d2e0dff61" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="79d41e2b-4f04-44ab-8576-dd2af0e54201" LastKnownName="客户权限获取接口" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="cb98335a-42a1-4209-9c83-aa1e01e2cedb" name="进项查验接口" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="750eae01-4ac3-4eb3-adf3-31d0d9f7be11" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="4471a1cc-2925-4bbe-94ed-6b3eb6b5a104" name="销向拉取接口" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="08b84414-8f99-4be9-9db8-9cc5995fcef6" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="cec77b77-e145-4cb9-9fee-0a3c6fd97e40" name="Customer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ead9c378-57ce-49a6-a77b-94f06b3a2177" />
+        <ownedAttributesInternal>
+          <providedInterface Id="7f326ee9-13a1-4db3-9d7c-071ca61b5a2c" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="dfe36482-c089-4e6a-a75b-a8609d7c11b0" />
+            <type_NamedElement>
+              <interfaceMoniker Id="0ccaba44-5441-48cb-b604-3dba5a252382" LastKnownName="客户凭据验证接口" />
+            </type_NamedElement>
+          </providedInterface>
+          <providedInterface Id="66906437-6fd4-4740-8fdd-bbeba2321407" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="f7fe8db9-5363-4c53-90fc-5f8c85adcc2d" />
+            <type_NamedElement>
+              <interfaceMoniker Id="1aaab107-1e59-4833-a023-266a5b0a738f" LastKnownName="客户权限获取接口" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="2b6a79f4-7cae-44b4-85b8-99f6f989eb2a" name="SaleInvoice" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="dee106bb-5c18-4c10-8f10-2177e3f38fda" />
+        <ownedAttributesInternal>
+          <providedInterface Id="fffb6957-3dd0-4f0b-9aad-05c5ae9a5aa4" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="9867b636-45cc-433d-a92e-f9f2dc6fd063" />
+            <type_NamedElement>
+              <interfaceMoniker Id="80db5cd8-8a1b-490f-9a3d-7086506a877e" LastKnownName="销向拉取接口" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface Id="c7c72963-5def-4b5f-8ef0-76cee5c3e793" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="ad0f7684-2666-4c98-ba48-61690b022810" />
+            <type_NamedElement>
+              <interfaceMoniker Id="be9f8365-182a-44e9-b887-263e63f6aa49" LastKnownName="下载" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="80db5cd8-8a1b-490f-9a3d-7086506a877e" name="销向拉取接口" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="79125ba0-b3c8-4f91-8abd-50ad0ed5cfd4" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="c4d2e107-61ef-4ce7-a5a5-b57b92dbbeac" name="InvoiceCheck" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a04d2f03-5906-4d65-ae26-a6ad91bb6a26" />
+        <ownedAttributesInternal>
+          <providedInterface Id="6d6fdf6c-1cd1-47d0-bd77-3eaed81d1d6d" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="11a52d81-4285-47ae-97ca-66bf7055983c" />
+            <type_NamedElement>
+              <interfaceMoniker Id="137efa31-9024-4d16-9f5a-205a54e45f1d" LastKnownName="进项查验接口" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface Id="9b4e5e83-b3e1-4023-9b83-b9bbb35ce288" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="a78cc3a1-4b0b-4f70-90a6-a0dce1d7bf24" />
+            <type_NamedElement>
+              <interfaceMoniker Id="e1351f07-177b-41cb-8dc9-8711098e1971" LastKnownName="上传/查验" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="137efa31-9024-4d16-9f5a-205a54e45f1d" name="进项查验接口" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fb2f0fbf-b2d0-47a7-a26f-6468b34cb6ca" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="3f4d1b88-260e-4d58-a39d-721ec1dc20d5" name="电子票凭据管理 客户端" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="32214013-890e-40b0-90a0-054cb34804c4" />
+        <ownedAttributesInternal>
+          <requiredInterface Id="321f763f-b042-4dc4-a9f4-17dc7711e949" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="bb9caadc-0b89-40ac-8d25-0d62e6ae4988" />
+            <suppliersInternal>
+              <dependency Id="23ddd771-d70d-4daa-9509-221786975a1b">
+                <providedInterfaceMoniker Id="e74cc136-7e6b-45ef-952f-11b224646b92" LastKnownName="Port2" />
+                <elementDefinition Id="7c705473-ce28-46e3-b079-df9b9dcb8a7d" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="d5bfa542-9929-4833-a299-ec418773a36c" LastKnownName="销向下载" />
+            </type_NamedElement>
+          </requiredInterface>
+          <requiredInterface Id="529cfb5a-18db-4864-a9ea-e7a7aacb4008" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="4f24ae68-cdc8-4dfc-9bd3-d87b5db505f8" />
+            <suppliersInternal>
+              <dependency Id="d443f6b0-7e08-49fa-8264-1ae91a9fcfde">
+                <providedInterfaceMoniker Id="c0a05fda-e978-454d-9915-aaa8a78fbb15" LastKnownName="Port1" />
+                <elementDefinition Id="805f476a-169f-4fa2-aad5-bbd092439942" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="72dd072f-1d6e-4645-9a56-8c6c217e4429" LastKnownName="进项查验" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="d5bfa542-9929-4833-a299-ec418773a36c" name="销向下载" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4d58cfe7-cc2e-419e-84fc-74e68859006b" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="72dd072f-1d6e-4645-9a56-8c6c217e4429" name="进项查验" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="27e3e82d-189b-4ac8-8f78-b0b856cd32e5" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="849ea6b9-4218-4be7-acd6-2548f4648a79" name="电子票凭据管理系统 客户代理服务器" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="57cc0bde-abe7-4a11-9ff4-e39502376817" />
+        <ownedAttributesInternal>
+          <providedInterface Id="e74cc136-7e6b-45ef-952f-11b224646b92" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="516fcbdc-2b7c-40fa-b210-acd5322ac515" />
+            <type_NamedElement>
+              <interfaceMoniker Id="e31b4eb5-d98c-44f3-a14b-3742265e7631" LastKnownName="销向下载代理服务" />
+            </type_NamedElement>
+          </providedInterface>
+          <providedInterface Id="c0a05fda-e978-454d-9915-aaa8a78fbb15" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="83f106a6-49c4-49a4-ab72-ef58e571c05e" />
+            <type_NamedElement>
+              <interfaceMoniker Id="79bcbc19-be74-42a7-aac9-839e8d7ba61f" LastKnownName="进项查验代理服务" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface Id="dbe4a4ce-3ac9-4c63-9d60-9a16b81be555" name="Port3" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="581d4049-4c5b-4f55-97aa-0cc6bba92cad" />
+            <suppliersInternal>
+              <dependency Id="f83b66ac-713d-45d9-959a-483ce499209b">
+                <providedInterfaceMoniker Id="b88e2def-a851-4e36-9c7d-2cb0851d50e5" LastKnownName="Port3" />
+                <elementDefinition Id="415017b7-135f-4080-a3d6-4d301725cb4d" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="ec98399b-298b-4614-8d23-1d2fe2d1015b" LastKnownName="销向下载" />
+            </type_NamedElement>
+          </requiredInterface>
+          <requiredInterface Id="44d1ce3c-9470-42f4-81b0-abbd86713542" name="Port4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="de4f8d47-fb24-41e4-b8d0-c1b60db5cebf" />
+            <suppliersInternal>
+              <dependency Id="eacfc215-a703-470c-9e8e-0849b7364ed0">
+                <providedInterfaceMoniker Id="9c967e7a-576f-4fb5-9f74-ac30bfa0f016" LastKnownName="Port2" />
+                <elementDefinition Id="a7daeeac-03c4-4959-96b0-42eca3bd35cc" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="867f4a9f-b530-4d6c-ab53-639ec1266d66" LastKnownName="进项查验" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="e31b4eb5-d98c-44f3-a14b-3742265e7631" name="销向下载代理服务" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fc13be15-7fab-4de2-956f-40072b88fde7" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="3cba0068-0ef5-4d7b-ae00-145772a32fe1" name="电子票 前置服务" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b0e2c3c0-fc1a-4da5-b229-cdfdbd93567d" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="5368a7a2-4528-45ea-8cfd-e17e594fc79e" name="电子票凭据管理系统-服务平台（WebSite）" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7291116f-bd19-47f8-9465-428a7117566d" />
+        <ownedAttributesInternal>
+          <part Id="eb2875d5-6db8-421b-89e6-4a7154df43d0" name="发票数据管理" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="b84972e2-2e1e-447a-bd7c-a3ab709000b7" />
+            <type_NamedElement>
+              <componentMoniker Id="830cbd01-0642-4f29-933f-337dd4095dc5" LastKnownName="InvoiceAdmin" />
+            </type_NamedElement>
+          </part>
+          <part Id="4c775574-88b1-4a7b-89d0-a7c1f986dffe" name="企业计费管理" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="1484c2d4-4db6-47a1-be92-a3b0b48ec092" />
+            <type_NamedElement>
+              <componentMoniker Id="0b685918-da3b-4352-92ac-48734ca7543c" LastKnownName="Business" />
+            </type_NamedElement>
+          </part>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="830cbd01-0642-4f29-933f-337dd4095dc5" name="InvoiceAdmin" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="480a145b-06e2-4a4f-8c4f-ee663d6a235f" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="0b685918-da3b-4352-92ac-48734ca7543c" name="Business" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c243cdf0-5085-400f-9f50-9cbe0c6b867b" />
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="0ccaba44-5441-48cb-b604-3dba5a252382" name="客户凭据验证接口" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9f89b0c9-943b-4d8a-9521-bd017503943f" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="5fd8918a-b30a-4212-83a4-05da5429d2fe" name="客户凭据验证接口" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b563d77c-8fb0-42fb-a021-88145c3abe1c" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="e3b80652-fc31-4c43-816b-5619bf829cf9" name="51发票服务平台" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f690cf1b-cfd8-40e4-a3a0-41fb589ccb1e" />
+        <ownedAttributesInternal>
+          <providedInterface Id="dc9eaba7-307c-4169-9e57-7f432000b59c" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="1be08d55-4bd9-4c7a-8546-65f5b2d1d6ae" />
+            <type_NamedElement>
+              <interfaceMoniker Id="320ef9ff-3afb-4178-b3d3-da2cad6c49e7" LastKnownName="下载接口" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="71e0ca8e-af2a-4c41-b3b2-f68d30937256" name="大象慧云平台" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fd1173cd-dc87-4aeb-bb9a-36a9af62ebc1" />
+        <ownedAttributesInternal>
+          <providedInterface Id="8d3735bd-56c1-45a7-96a9-013a7a1bb53a" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="5193f2e7-3dcf-4543-91b6-09b99197280a" />
+            <type_NamedElement>
+              <interfaceMoniker Id="e077a791-a21f-4aa9-a444-38ebd823405c" LastKnownName="查验接口" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="320ef9ff-3afb-4178-b3d3-da2cad6c49e7" name="下载接口" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a0eb05aa-f3d1-47d8-86fe-d6c2a6e34c4f" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="e077a791-a21f-4aa9-a444-38ebd823405c" name="查验接口" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c041f13c-a001-4f74-8d9a-ff325f26a1ee" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="be9f8365-182a-44e9-b887-263e63f6aa49" name="下载" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="48f9f1ac-37a3-4f48-bc1c-bf2b3eca2f8d" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="e1351f07-177b-41cb-8dc9-8711098e1971" name="上传/查验" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a4bc8507-48ab-4eb7-afcd-5d342a96c51e" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="30242efc-b94b-4cd9-a9b9-c0a79da1aa1c" name="下载" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="44d3386a-7169-4e6d-b5a1-406afb961740" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="b923dde0-156e-4247-b4de-8c6fb0284f7a" name="上传/查验" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="60d56b6f-7e97-4159-88ec-726810f179a6" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="1aaab107-1e59-4833-a023-266a5b0a738f" name="客户权限获取接口" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8091e37f-2c00-49ee-bee9-6f155d6ca194" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="79d41e2b-4f04-44ab-8576-dd2af0e54201" name="客户权限获取接口" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="45bb3a78-c144-4d36-b463-8ba93a352257" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="79bcbc19-be74-42a7-aac9-839e8d7ba61f" name="进项查验代理服务" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9ece811a-ff7b-4f71-933d-525ed729d356" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="ec98399b-298b-4614-8d23-1d2fe2d1015b" name="销向下载" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="49cbe139-613e-473a-84a4-8bcd179b73f9" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="867f4a9f-b530-4d6c-ab53-639ec1266d66" name="进项查验" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="386fc54e-e968-4ab3-83fb-3f2749c58e52" />
+      </Interface>
+    </modelContainsNamedElements>
+  </packagedElements>
+  <package Id="720aea38-b554-41db-bb76-0898a9c6541f" name="ModelingProject">
+    <elementDefinition Id="e027e3c6-a077-49a5-a50b-98e4104a486e" />
+  </package>
+</componentModel>

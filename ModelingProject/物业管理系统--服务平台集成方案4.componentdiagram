@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="5687a892-4a08-45d6-ab6a-f496900cd767" name="物业管理系统--服务平台集成方案4" linkedPackageId="10f70c9e-0d08-4170-9fce-ca8a341db96c" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="daf4e32e-eec1-49e3-9772-45680f486b97">
-      <profileInstance Id="cd03cce0-7fa8-45f2-bad4-657d0bc99daf" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="09a96913-1d90-4190-acb1-ac19734c1f6c">
-      <profileInstance Id="a6b94bd4-0f02-42b8-9a26-037e98ee9dee" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <componentModelHasComponents>
       <component Id="fd97f893-4dcc-4436-a0ca-fb630b7fc38b" name="智慧云社区（互联网服务平台）121" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -22,9 +8,9 @@
           <requiredInterface Id="5e26b806-efd9-482a-a8f5-26cae4fc27a4" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
             <elementDefinition Id="2503acd2-9a58-4c22-90f7-3de4d98270b4" />
             <suppliersInternal>
-              <dependency Id="f6e928e9-2e72-4969-953e-561b4cf2282b">
+              <dependency Id="e737d040-aa13-440a-ab82-b4d5c063702f">
                 <providedInterfaceMoniker Id="04c356d7-f971-4bbd-b1fa-fb7ee899fc24" LastKnownName="Port4" />
-                <elementDefinition Id="62647b65-4f3a-4514-91cc-108f64105b13" />
+                <elementDefinition Id="4b95d70a-6563-4a97-868b-5dada3b480ee" />
               </dependency>
             </suppliersInternal>
             <type_NamedElement>
@@ -63,9 +49,9 @@
           <requiredInterface Id="4660bbc7-0c8b-434e-b873-d78d48f0e5b7" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
             <elementDefinition Id="62d2703b-1343-4828-92ce-371ba76b7b7d" />
             <suppliersInternal>
-              <dependency Id="c67b91c0-2bcf-4f48-9289-3b2c5f420bf8">
+              <dependency Id="1bd720be-f6c4-4a77-9ac3-a08b2d2588db">
                 <providedInterfaceMoniker Id="af74e3a0-3ac0-4fb6-bec7-fad1688a7c30" LastKnownName="Port1" />
-                <elementDefinition Id="c35302fa-3698-4044-878a-8321dd152193" />
+                <elementDefinition Id="23c857fe-67df-4131-929d-e4afc269e950" />
               </dependency>
             </suppliersInternal>
             <type_NamedElement>
@@ -88,5 +74,19 @@
   </packagedElements>
   <package Id="10f70c9e-0d08-4170-9fce-ca8a341db96c" name="ModelingProject">
     <elementDefinition Id="e027e3c6-a077-49a5-a50b-98e4104a486e" />
+    <profileInstances>
+      <packageHasProfileInstances Id="daf4e32e-eec1-49e3-9772-45680f486b97">
+        <profileInstance Id="cd03cce0-7fa8-45f2-bad4-657d0bc99daf" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="09a96913-1d90-4190-acb1-ac19734c1f6c">
+        <profileInstance Id="a6b94bd4-0f02-42b8-9a26-037e98ee9dee" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </componentModel>
