@@ -112,38 +112,6 @@
           LastKnownLocation="ModelingProject.uml" />
       </annotatedElements>
     </comment>
-    <comment
-      Id="dff2dea5-5b6c-4dca-979d-3672bca3e01e">
-      <annotatedElements>
-        <componentMoniker
-          Id="57cc0bde-abe7-4a11-9ff4-e39502376817"
-          LastKnownName="电子票凭据管理系统 客户代理服务器"
-          LastKnownLocation="ModelingProject.uml" />
-      </annotatedElements>
-    </comment>
-    <comment
-      Id="bff3cc60-0a00-4d5f-b83f-0e2a5917bb36">
-      <body>
-</body>
-      <annotatedElements>
-        <componentMoniker
-          Id="32214013-890e-40b0-90a0-054cb34804c4"
-          LastKnownName="电子票凭据管理 客户端"
-          LastKnownLocation="ModelingProject.uml" />
-      </annotatedElements>
-    </comment>
-    <comment
-      Id="c8c15589-83fa-44e7-970e-26e2602ce99f">
-      <body>客户凭据验证封装为服务；
-
-</body>
-      <annotatedElements>
-        <partMoniker
-          Id="b8fc6118-3ca4-441f-8f13-d1212960c655"
-          LastKnownName="客户凭据管与授权理"
-          LastKnownLocation="ModelingProject.uml" />
-      </annotatedElements>
-    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
@@ -2907,6 +2875,90 @@
                 LastKnownLocation="ModelingProject.uml" />
             </type_NamedElement>
           </requiredInterface>
+          <requiredInterface
+            Id="8c94cf2f-d953-4f1f-ac61-2022e7a34f4a"
+            name="Port3"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="c3fa42a8-9a47-462b-803f-fccf4dd00f36">
+                <providedInterfaceMoniker
+                  Id="8ca89c1f-af44-441e-bfae-134d1f852ded"
+                  LastKnownName="Port5"
+                  LastKnownLocation="ModelingProject.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="63cca798-01a5-4c11-bf7b-cd4263b805a5"
+                LastKnownName="登录"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+          <requiredInterface
+            Id="0315fdca-4145-425b-b867-8eae2d449b50"
+            name="Port4"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="2fc81102-635d-4ea2-af0d-9e1dd5d869d2">
+                <providedInterfaceMoniker
+                  Id="237f8c7e-47b1-4b4e-a050-38fe5ee04ac8"
+                  LastKnownName="Port6"
+                  LastKnownLocation="ModelingProject.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="a9771e94-9e99-46d8-adfe-44e34a030bae"
+                LastKnownName="权限获取"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+          <requiredInterface
+            Id="43408032-c920-481b-a4a1-4b869fdd50b1"
+            name="Port5"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="b4c20f94-5744-4759-886a-bbf707fceb87">
+                <providedInterfaceMoniker
+                  Id="ee87fa3c-44da-45fc-bd9c-d2c0916a7cc9"
+                  LastKnownName="Port9"
+                  LastKnownLocation="ModelingProject.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="3e590d5e-7a1c-4a48-b5b5-723b3c56905a"
+                LastKnownName="凭据验证"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </requiredInterface>
         </ownedAttributesInternal>
       </component>
     </packageHasNamedElement>
@@ -3012,6 +3064,119 @@
                 LastKnownLocation="ModelingProject.uml" />
             </type_NamedElement>
           </requiredInterface>
+          <providedInterface
+            Id="8ca89c1f-af44-441e-bfae-134d1f852ded"
+            name="Port5"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="277785d4-3d82-4bb7-a768-29f7c0c33739"
+                LastKnownName="用户验证接口"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </providedInterface>
+          <providedInterface
+            Id="237f8c7e-47b1-4b4e-a050-38fe5ee04ac8"
+            name="Port6"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="3c1a0df1-fb03-43e2-b814-44cc9fdf6eac"
+                LastKnownName="权限获取代理服务"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface
+            Id="b085442d-1fa0-49d6-ab0c-6c5f5e9899eb"
+            name="Port7"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="2ab12704-dfa7-46cc-8e90-2fba365752a9">
+                <providedInterfaceMoniker
+                  Id="629a586b-e830-40ca-adca-e9e614f03b28"
+                  LastKnownName="Port1"
+                  LastKnownLocation="ModelingProject.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="b8ebf0e9-9bc8-4e14-aff6-4729e66fb5d1"
+                LastKnownName="凭据验证"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+          <requiredInterface
+            Id="ee5844c4-2c2c-4e0c-99ad-085cea7ed1b1"
+            name="Port8"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="9b3fabf0-f0c4-476b-8e5f-f3757a972b33">
+                <providedInterfaceMoniker
+                  Id="89293b9e-d808-4178-8d65-d78a8d7f63bd"
+                  LastKnownName="Port6"
+                  LastKnownLocation="ModelingProject.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="11d832d8-ae7c-45e3-93d5-71a091e3fafb"
+                LastKnownName="权限获取"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+          <providedInterface
+            Id="ee87fa3c-44da-45fc-bd9c-d2c0916a7cc9"
+            name="Port9"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="11ea8a23-1dc0-411c-9b12-393617adcc8b"
+                LastKnownName="凭据验证代理服务"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </providedInterface>
         </ownedAttributesInternal>
       </component>
     </packageHasNamedElement>
@@ -3247,6 +3412,62 @@
       <Interface
         Id="386fc54e-e968-4ab3-83fb-3f2749c58e52"
         name="进项查验"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="63cca798-01a5-4c11-bf7b-cd4263b805a5"
+        name="登录"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="277785d4-3d82-4bb7-a768-29f7c0c33739"
+        name="用户验证接口"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="a9771e94-9e99-46d8-adfe-44e34a030bae"
+        name="权限获取"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="3c1a0df1-fb03-43e2-b814-44cc9fdf6eac"
+        name="权限获取代理服务"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="b8ebf0e9-9bc8-4e14-aff6-4729e66fb5d1"
+        name="凭据验证"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="11d832d8-ae7c-45e3-93d5-71a091e3fafb"
+        name="权限获取"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="3e590d5e-7a1c-4a48-b5b5-723b3c56905a"
+        name="凭据验证"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="11ea8a23-1dc0-411c-9b12-393617adcc8b"
+        name="凭据验证代理服务"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
